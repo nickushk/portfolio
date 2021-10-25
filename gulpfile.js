@@ -9,7 +9,7 @@ const files = {
 }
 
 //? Include Gulp methods
-const { scr, dest, parallel, series, watch } = require("gulp");
+const { src, dest, parallel, series, watch } = require("gulp");
 
 //? Inkude Concat make all files to one file
 const concat = require("gulp-concat");
@@ -22,42 +22,42 @@ const babel = require("gulp-babel");
 
 //? Include Imgemin for compress images
 const imageMin = require("gulp-imagemin");
-const { src } = require("vinyl-fs");
-const { SourceMap } = require("module");
+
+var sourcemaps = require('gulp-sourcemaps');
 
 
 //* Inkludera TS
 const ts = require("gulp-typescript");
-var tsProject = ts.createProject("teconfig.json");
+var tsProject = ts.createProject("tsconfig.json");
 
 //* Include SASS packet
 const sass = require("gulp-sass")(require("sass"));
 
 //* Include Browser-Sync 
-const browser_sync = require("browser_sync").create();
+const browsersync = require("browser-sync").create();
 
 // SASS task 
 function sassTask() {
     return src(files.sassPath, { sourcemaps: true })
         .pipe(sass().on("error", sass.logError))
-        .pipe(dest("pup/css", { soursmaps: "." })) //! sourcemap make it possible to replace in new map
-        .pipe(browser_sync.stream());
+        .pipe(dest("pub/css", { soursmaps: "." })) //! sourcemap make it possible to replace in new map
+        .pipe(browsersync.stream());
 }
 
 // HTML task
 function htmlTask() {
-    return src(filer.htmlPath)
+    return src(files.htmlPath)
         .pipe(dest("pub"));
 
 }
 
 // Js task
 function jsTask() {
-    return scr(filer.jsPath, { sourcemaps: true })
+    return src(files.jsPath, { sourcemaps: true })
         .pipe(babel())
         .pipe(concat("main.js"))
         .pipe(terser())
-        .pipe(dest("pub/js"));
+        .pipe(dest("pub/js", { sourcemaps: "."}));
 
 }
 
@@ -81,13 +81,13 @@ function imageTask() {
 // Watch task
 function watchTask() {
     // run all files in pub
-    browser_sync.init({
+    browsersync.init({
         sever: "./pub"
     });
 
     // watch for changing and reload with any changes
     watch([files.htmlPath, files.sassPath, files.jsPath, files.imagePath, files.tsPath],
-        parallel(htmlTask, jsTask, imageTask, sassTask, tsTask).on("change", browser_sync.reload));
+        parallel(htmlTask, jsTask, imageTask, sassTask, tsTask)).on("change", browsersync.reload);
 
 }
 
