@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "> Webbplatsen konsumerar REST-webbtjänsten som skapats i API projektet, webbplatsen är en sidigt och data för kurser arbetserfarenheter samt projekt kommer från länken nedan.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Kushkbaghi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-terser": "^2.1.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "save-dev": "0.0.1-security"
+  }
+}
