@@ -16,32 +16,300 @@
     <link rel="icon" href="images/favicon.png" type="image/favicon.png">
 
     <!-- font awsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <!-- google font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/sass/main.css">
     <title>Start</title>
 </head>
 
+
 <body>
-    <h1>HEJ</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolor dignissimos ipsam nisi architecto
-        obcaecati qui, explicabo officia minus eius dolorem, iure deserunt, libero reprehenderit blanditiis quae?
-        Voluptas, ipsa quis.</p>
-    <h2>hejdå</h2>
-    <h3>hej igen</h3>
-    <h3>hej igen</h3>
+
+    <!-- Header and navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/nick.svg" alt="nick signatur">
+                <strong class="logo_text">Nick Kushkbaghi</strong>
+            </div>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="#nav_om">Om mig</a></li>
+                <li><a href="#nav_projekt">Projekt</a></li>
+                <li><a href="#nav_studier">Studier</a></li>
+                <li><a href="#nav_arbete">Arbetserfarenhet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main section -->
+    <main>
+
+        <!-- Banner -->
+        <section class="banner flex_row">
+            <img src="images/Banner.svg" alt="tre personer placera JS, CSS och HTML logo">
+
+            <!--Title-->
+            <div class="cta grid">
+                <h1>Hej! jah heter Nick!</h1>
+                <p>Jag är en webbutvecklare, välllkommen till min sida!</p>
+                <a href="#nav_kontakt" class="btn btn_blue">KONTAKT <i class="far fa-envelope"></i></a>
+
+                <!-- Links -->
+                <div class="cta_links">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-facebook-messenger"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Card under banner -->
+        <section class="card under_banner">
+
+            <!-- Webbutvecklare -->
+            <div class="u_b_card flex_col">
+                <div class="card_logo content_center">
+
+                    <i class="fas fa-code"></i>
+                </div>
+
+                <h2>webbutveckling</h2>
+                <p>Som webbutvecklare har jag god förståelse för tillgänglghet samt hur webbapplikationer fungerar.
+                    Jag utvecklar i bland annat Javascript, PHP, HTML, CSS och även OOP med Java.</p>
+                <a href="#nav_projekt">TILL MINA TIDIGARE PROJEKT<i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Studier -->
+            <div class="u_b_card flex_col">
+                <div class="card_logo content_center">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h2>Studier</h2>
+                <p>Jag är studen t i Mittuniversitetet Webbutveckling programmet.
+                    Jag har läst diverse extra kurser om programmering i olika språk exempelvis, Java och Python för
+                    matematik lärare</p>
+                <a href="#nav_projekt">TILL MINA STUDIER<i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Arbetserfarenhet -->
+            <div class="u_b_card flex_col">
+                <div class="card_logo content_center">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2>Arbetserfarenhet</h2>
+                <p>Jag har jobbatsom lärarassistent, lärare i digital kompetens och matematik på grundläggande nivå
+                    på komvux i sju år.</p>
+                <a href="#nav_projekt">TILL MINA ARBETSERFARENHETER<i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </section>
+
+        <!-- Verktyg section -->
+        <section class="my_tools flex_col">
+            <img class="center_img" src="images/Tools.svg" alt="en man sitter vid dator med sex skärm">
+            <h3>Verktyg jag använder</h3>
+
+            <!--tools pictures-->
+            <div class="tools_list grid_four">
+                <div class="tool">
+                    <div class="tool_img flex_row">
+                        <i class="fab fa-css3-alt"></i>
+                        <strong>CSS</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <i class="fab fa-html5"></i>
+                        <strong>HTML</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <i class="fab fa-js-square"></i>
+                        <strong>JavaScript</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <i class="fab fa-php"></i>
+                        <strong>PHP</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <i class="fab fa-java"></i>
+                        <strong>Java</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <i class="fab fa-gulp"></i>
+                        <strong>Gulp</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <p class="adobe_logo">Ai</p>
+                        <strong>Adobe Illustration</strong>
+                    </div>
+                </div>
+
+                <div class="tool">
+                    <div class="tool_img">
+                        <p class="adobe_logo">XD</p>
+                        <strong>Adobe XD</strong>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projekt section from REST-->
+        <section id="#nav_projekt" class="flex_col">
+            <img src="images/project.svg" alt="en webbplats som innehåller solen och en löv i sig">
+            <h3>Mina projekt</h3>
+
+            <div class="webbsite">
+                <div class="web_infor">
+                    <h4></h4>
+                    <strong></strong>
+                    <p></p>
+                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="web_img">
+                    <img src="images/" alt="">
+                </div>
+            </div>
+            <div class="webbsite">
+                <div class="web_infor">
+                    <h4></h4>
+                    <strong></strong>
+                    <p></p>
+                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="web_img"></div>
+            </div>
+            <div class="webbsite">
+                <div class="web_infor">
+                    <h4></h4>
+                    <strong></strong>
+                    <p></p>
+                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="web_img"></div>
+            </div>
+            <div class="webbsite">
+                <div class="web_infor">
+                    <h4></h4>
+                    <strong></strong>
+                    <p></p>
+                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="web_img"></div>
+            </div>
+            <div class="webbsite">
+                <div class="web_infor">
+                    <h4></h4>
+                    <strong></strong>
+                    <p></p>
+                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="web_img"></div>
+            </div>
+        </section>
 
 
+        <!-- Studier section from REST-->
+        <section id="nav_studier" class="flex_col">
+            <img src="images/Study.svg" alt="en man läser en bok">
+            <h3>Mina studier</h3>
+            <div class="studier_table">
 
+            </div>
+        </section>
+
+        <!-- Arbetserfarenhet section from REST-->
+        <section id="nav_arbete" class="flex_col">
+            <img src="images/job.svg" alt="en man peckar på en text">
+            <h3>Mina arbetserfarenhetr</h3>
+            <div class="arbete_table">
+
+            </div>
+        </section>
+
+        <!-- Om section -->
+        <section id="nav_om">
+            <img src="images/om.svg" alt="en man ">
+            <h3>Om mig</h3>
+            <div class="om_text flex_col">
+                <h4>Webbutvecklare och webbdesigner</h4>
+                <p>
+                    Jag är en väldigt nyfiken och självgående person med en stor passion för design i allmänhet.
+                    om webbutvecklare är jag mycket målmedveten med ett stort sinne för problemlösning
+
+                </p>
+                <!-- Links -->
+                <div class="cta_links">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-facebook-messenger"></i>
+                </div>
+
+            </div>
+
+            <!-- kompetenser card -->
+            <div class="kompetenser">
+                <img src="images/comp.svg" alt="en man sitter vid en dator">
+            </div>
+        </section>
+
+        <!-- Kontakt section -->
+        <section id="nav_kontakt">
+            <img src="images/mailbox.svg" alt="en brevlåda">
+            <h3>Kontakta mig</h3>
+
+
+            <form class="Kontakt_form form" action="mailto:nick.kushkbaghi@gmail.com" method="post"
+                enctype="text/plain">
+                Namn:<br>
+                <input type="text" name="name"><br>
+                E-mail:<br>
+                <input type="text" name="mail"><br>
+                Meddelande:<br>
+                <input type="text" name="comment" size="50"><br><br>
+                <input type="submit" value="SICKA">
+                <input type="reset" value="ÅTERSTÄLLA">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex_col">
+        <strong>Nick Kushkbaghi</strong>
+        <!-- Links -->
+        <div class="cta_links">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-facebook-messenger"></i>
+        </div>
+        <p>Copyright &copy; 2021 Nick Kushkbaghi</p>
+    </footer>
     <!-- JS -->
 
     <!-- JS.app -->

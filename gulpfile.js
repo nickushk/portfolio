@@ -82,7 +82,7 @@ function imageTask() {
 function watchTask() {
     // run all files in pub
     browsersync.init({
-        sever: "./pub"
+        server: "./pub"
     });
 
     // watch for changing and reload with any changes
