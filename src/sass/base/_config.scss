@@ -4,14 +4,14 @@ $darkColor: rgb(46, 42, 42);
 $blueColor: #00b7ff;
 $yellowColor: rgb(238, 255, 0);
 $orangeColor: #ff0000;
-$fontSizeH1: clamp(4rem, calc( 4vw + 1.6rem), 5.5rem);
-$fontSizeH2: clamp(3rem, calc( 3.5vw + 1.6rem), 4.5rem);
-$fontSizeH3: clamp(2.5rem, calc( 3vw + 1.6rem), 4rem);
-$fontSizeH4: clamp(2.3rem, calc( 2vw + 1.6rem), 3rem);
-$fontSizeH5: clamp(2rem, calc( 1.5vw + 1.6rem), 2.5rem);
-$fontSizeH6: clamp(1.8rem, calc( 0.5vw + 1.6rem), 2rem);
-$fontSizeP: clamp(1.6rem, calc( 0.2rem + 1.6rem), 1.8rem);
-$shadow-box: -.1px .01px 10px -10px $darkColor;
+$fontSizeH1: clamp(4rem, calc(4vw + 1.6rem), 5.5rem);
+$fontSizeH2: clamp(3rem, calc(3.5vw + 1.6rem), 4.5rem);
+$fontSizeH3: clamp(2.5rem, calc(3vw + 1.6rem), 4rem);
+$fontSizeH4: clamp(2.3rem, calc(2vw + 1.6rem), 3rem);
+$fontSizeH5: clamp(2rem, calc(1.5vw + 1.6rem), 2.5rem);
+$fontSizeH6: clamp(1.8rem, calc(0.5vw + 1.6rem), 2rem);
+$fontSizeP: clamp(1.6rem, calc(0.2rem + 1.6rem), 1.8rem);
+$shadow-box: 0px 4px 17px -4px rgba(0,0,0,1);
 
 
 
@@ -21,10 +21,12 @@ $shadow-box: -.1px .01px 10px -10px $darkColor;
 */
 
 // check contrast/lightness and return suitable color
-@function set_color($color){
-    @if (lightness($color) > 70){
+@function set_color($color) {
+    @if (lightness($color) > 70) {
         @return $darkColor;
-    }@else{
+    }
+
+    @else {
         @return $lightColor;
     }
 }
@@ -38,13 +40,13 @@ $shadow-box: -.1px .01px 10px -10px $darkColor;
 // set bg- and test color
 @mixin set_bg_color($color) {
     background-color: $color;
-    color : set_color($color);
+    color: set_color($color);
 }
 
 // breakpoints
-@mixin mediaQ ($max_width){
-    @media only screen and(max-width: $max_width) { 
-      @content;
+@mixin mediaQ ($max_width) {
+    @media only screen and(max-width: $max_width) {
+        @content;
     }
 }
 
@@ -55,12 +57,13 @@ $shadow-box: -.1px .01px 10px -10px $darkColor;
 
     align-items: center;
     margin: 0 auto;
-    
+
 }
-%btn{
+
+%btn {
     display: inline-block;
     padding: 8px 20px;
     font-size: 1.4rem;
     border-radius: .5rem;
-   
+
 }
