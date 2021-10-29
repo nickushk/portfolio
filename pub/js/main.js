@@ -1,2 +1,2 @@
-"use strict";
+const menu_btn=document.querySelector(".menu_btn");let menu_open=!1;const nav_list=document.querySelector(".navbar_mob");menu_btn.addEventListener("click",(function(){menu_open?(menu_btn.classList.remove("open"),nav_list.classList.remove("visible"),menu_open=!1):(menu_btn.classList.add("open"),nav_list.classList.add("visible"),menu_open=!0)}));
 //# sourceMappingURL=main.js.map

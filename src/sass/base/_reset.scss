@@ -1,11 +1,74 @@
-*,*::before,*::after{
-box-sizing: border-box;
-padding: 0;
-margin: 0 auto;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
 }
 
-body, html{
+
+// Globale settings
+body,
+html {
     font-size: 10px;
     font-family: 'Zen Kaku Gothic New', sans-serif;
     line-height: 1.6;
+    background-color: $lightColor;
+    color: $darkColor;
+    padding: 0;
+    margin: 0 auto;
+
 }
+
+.flex_col {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.flex_row {
+    display: flex;
+
+}
+
+.flex_row_space_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex_col_space_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+}
+
+.content_center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center_img {
+    text-align: center;
+    margin: 0 auto;
+}
+

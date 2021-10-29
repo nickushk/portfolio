@@ -3,6 +3,218 @@
 @import "./layout/footer";
 @import "./layout/nav";
 
-body{
-    background-color: blue;
+// common settings
+// Sub images {
+.sub_img {
+    max-width: 50rem;
+}
+.sub_title{
+    font-size: $fontSizeH2;
+}
+
+// main 
+main {
+    max-width: 96rem;
+}
+
+// banner
+.banner {
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+
+
+    img {
+        width: 50%;
+        display: block;
+
+    }
+
+    // call to action
+    .cta {
+        @include set_grid_reapeat(2);
+        justify-content: left;
+        width: 40%;
+
+        h1 {
+            width: 100%;
+            grid-area: 1/1/2/3;
+            font-size: $fontSizeH3;
+            text-align: left !important;
+        }
+
+        p {
+            width: 100%;
+            text-align: left !important;
+            grid-area: 2/1/3/3;
+            font-size: $fontSizeP;
+            padding-bottom: 3rem;
+        }
+
+        .btn_blue {
+
+            grid-area: 3/1/4/2;
+            @extend %btn;
+            background-color: $blueColor;
+            color: $lightColor;
+            font-size: $fontSizeP;
+
+            &:hover {
+                @include set_bg_color($darkColor);
+            }
+        }
+
+        .cta_links {
+            grid-area: 3/2/4/3;
+            margin-left: 1rem;
+            gap: 1rem;
+
+            i {
+                font-size: 3rem;
+                padding: .6rem;
+                border-radius: 50%;
+                background-color: lighten($darkColor, 40);
+                color: $lightColor;
+            }
+
+            a:hover {
+                opacity: .5;
+                transition: .4s ease-in-out;
+            }
+        }
+    }
+}
+
+// Banner breakpoint
+@include mediaQ(760px) {
+    .banner {
+        flex-direction: column !important;
+        margin: 0 auto;
+
+        img {
+            width: 85%;
+        }
+
+        .cta {
+            width: 95%;
+            justify-content: center;
+            justify-content: center;
+
+            margin: 0 auto;
+
+            h1 {
+                width: 85%;
+                font-size: $fontSizeH1;
+            }
+
+            p {
+                width: 85%;
+            }
+
+            .btn_blue {
+                margin: 0 20% 20% auto;
+            }
+
+            .cta_links {
+                width: 50%;
+                margin: 0 auto 20% 20%;
+
+            }
+
+        }
+
+    }
+}
+
+// Banner breakpoint
+@include mediaQ(560px) {
+    .banner {
+        img {
+            width: 95%;
+        }
+
+        .cta {
+            width: 100%;
+
+            h1 {
+                line-height: 1.4;
+            }
+
+            .btn_blue {
+
+                grid-area: 3/1/4/3 !important;
+            }
+
+            .cta_links {
+                grid-area: 4/1/5/3 !important;
+                margin: 0 auto;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+// Card under banner
+.under_banner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    gap: 1rem;
+    align-items: flex-start;
+
+    .u_b_card {
+        width: 30rem;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+
+        box-shadow: $shadow-box;
+
+        .card_logo {
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+
+            i {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: $fontSizeH1;
+                color: $blueColor;
+            }
+
+            h2 {
+                font-size: $fontSizeH5;
+                font-weight: bold;
+            }
+
+        }
+
+        p {
+            width: 100%;
+            font-size: $fontSizeP;
+        }
+
+        a {
+            font-size: 1.4rem;
+            text-align: left;
+            width: 100%;
+            padding-top: 1rem;
+
+            i {
+                padding-left: .5rem;
+            }
+        }
+
+
+    }
+}
+
+// Under card breakpoint
+@include mediaQ(760) {
+
+    .under_banner {
+        overflow-x: scroll !important;
+    }
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="sv">
 
+<!-- HTML head -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,21 +29,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="css/sass/main.css">
+    <link rel="stylesheet" href="sass/main.css">
     <title>Start</title>
 </head>
 
+<!-- Body -->
 
 <body>
 
     <!-- Header and navigation -->
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/nick.svg" alt="nick signatur">
+
+            <a class="logo flex_row content_center" href="index.html"><img src="images/nick.svg" alt="nick signatur">
                 <strong class="logo_text">Nick Kushkbaghi</strong>
-            </div>
-            <ul>
+            </a>
+
+            <ul class="flex_row_space_between">
                 <li><a href="index.html">Start</a></li>
                 <li><a href="#nav_om">Om mig</a></li>
                 <li><a href="#nav_projekt">Projekt</a></li>
@@ -49,42 +53,57 @@
                 <li><a href="#nav_arbete">Arbetserfarenhet</a></li>
             </ul>
         </nav>
+        <div class="mobile_nav_list flex_col_space_between">
+            <div class="header_mob flex_row_space_between">
+                <a class="logo_mob" href="index.html"><img src="images/nick.svg" alt="nick signatur"></a>
+                <!-- hamburger menu -->
+                <div class="menu_btn">
+                    <div class="hamburger_btn"></div>
+                </div>
+            </div>
+            <ul class="navbar_mob flex_col_space_between">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="#nav_om">Om mig</a></li>
+                <li><a href="#nav_projekt">Projekt</a></li>
+                <li><a href="#nav_studier">Studier</a></li>
+                <li><a href="#nav_arbete">Arbetserfarenhet</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Main section -->
     <main>
 
         <!-- Banner -->
-        <section class="banner flex_row">
+        <section class="banner flex_row content_center">
             <img src="images/Banner.svg" alt="tre personer placera JS, CSS och HTML logo">
 
             <!--Title-->
             <div class="cta grid">
-                <h1>Hej! jah heter Nick!</h1>
+                <h1>Hej! jag heter Nick!</h1>
                 <p>Jag är en webbutvecklare, välllkommen till min sida!</p>
-                <a href="#nav_kontakt" class="btn btn_blue">KONTAKT <i class="far fa-envelope"></i></a>
+                <a href="#nav_kontakt" class="btn btn_blue">KONTAKT &nbsp; <i class="far fa-envelope"></i></a>
 
                 <!-- Links -->
-                <div class="cta_links">
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-facebook-messenger"></i>
+                <div class="cta_links flex_row_space_between">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
                 </div>
 
             </div>
         </section>
 
         <!-- Card under banner -->
-        <section class="card under_banner">
+        <section class="card under_banner flex_row">
 
             <!-- Webbutvecklare -->
             <div class="u_b_card flex_col">
-                <div class="card_logo content_center">
-
+                <div class="card_logo  flex_col">
                     <i class="fas fa-code"></i>
+                    <h2>webbutveckling</h2>
                 </div>
 
-                <h2>webbutveckling</h2>
                 <p>Som webbutvecklare har jag god förståelse för tillgänglghet samt hur webbapplikationer fungerar.
                     Jag utvecklar i bland annat Javascript, PHP, HTML, CSS och även OOP med Java.</p>
                 <a href="#nav_projekt">TILL MINA TIDIGARE PROJEKT<i class="fas fa-external-link-alt"></i></a>
@@ -92,10 +111,10 @@
 
             <!-- Studier -->
             <div class="u_b_card flex_col">
-                <div class="card_logo content_center">
+                <div class="card_logo flex_col">
                     <i class="fas fa-university"></i>
+                    <h2>Studier</h2>
                 </div>
-                <h2>Studier</h2>
                 <p>Jag är studen t i Mittuniversitetet Webbutveckling programmet.
                     Jag har läst diverse extra kurser om programmering i olika språk exempelvis, Java och Python för
                     matematik lärare</p>
@@ -104,10 +123,10 @@
 
             <!-- Arbetserfarenhet -->
             <div class="u_b_card flex_col">
-                <div class="card_logo content_center">
+                <div class="card_logo flex_col ">
                     <i class="fas fa-briefcase"></i>
+                    <h2>Arbetserfarenhet</h2>
                 </div>
-                <h2>Arbetserfarenhet</h2>
                 <p>Jag har jobbatsom lärarassistent, lärare i digital kompetens och matematik på grundläggande nivå
                     på komvux i sju år.</p>
                 <a href="#nav_projekt">TILL MINA ARBETSERFARENHETER<i class="fas fa-external-link-alt"></i></a>
