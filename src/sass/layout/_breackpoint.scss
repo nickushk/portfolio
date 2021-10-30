@@ -1,0 +1,141 @@
+// Banner breakpoint
+@include mediaQ(760px) {
+    .banner {
+        flex-direction: column !important;
+        margin: 0 auto;
+
+        img {
+            width: 84%;
+        }
+
+        .cta {
+            width: 95%;
+            justify-content: center;
+            justify-content: center;
+
+            margin: 0 auto;
+
+            h1 {
+                width: 85%;
+                font-size: $fontSizeH1;
+            }
+
+            p {
+                width: 85%;
+            }
+
+            .btn_blue {
+                margin: 0 20% 20% auto;
+            }
+
+            .cta_links {
+                width: 50%;
+                margin: 0 auto 20% 20%;
+
+            }
+
+        }
+
+    }
+}
+
+// Banner breakpoint
+@include mediaQ(560px) {
+    .banner {
+        img {
+            width: 90vw !important;
+
+            padding: 0;
+        }
+
+        .cta {
+
+            width: 90vw !important;
+
+            h1 {
+                margin-top: 2rem;
+                line-height: 1.4;
+                text-align: center;
+            }
+
+            .btn_blue {
+                margin: 0 auto;
+                text-align: left;
+                grid-area: 3/1/4/3 !important;
+            }
+
+            .cta_links {
+                grid-area: 4/1/5/3 !important;
+                margin: 5rem auto;
+                width: 100%;
+                padding: 0 10rem;
+
+            }
+        }
+    }
+
+}
+
+// om breakpoint
+@include mediaQ(760px) {
+    .om {
+
+
+        .kompetenser {
+            display: none;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    }
+}
+
+// Projekt breakpoint
+@include mediaQ(760px) {
+    .webbsite {
+        padding: 2rem 0;
+        flex-direction: column;
+
+        .web_info {
+            border-radius: 1rem;
+
+        }
+
+        .web_img {
+            display: block;
+            height: 30rem;
+
+
+
+            img {
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+// Under card breakpoint
+@include mediaQ(560px) {
+    .tools_list {
+
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+// table& form breackpoint
+@include mediaQ(560px) {
+    .table_frame {
+        overflow-x: scroll !important;
+    }
+
+    input {
+        width: 100%;
+
+        &[type=submit] {
+            margin-bottom: 3rem;
+        }
+    }
+
+}

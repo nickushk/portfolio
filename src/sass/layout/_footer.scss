@@ -1,0 +1,32 @@
+footer {
+    width: 100%;
+    height: 50vh;
+    background-color: $darkColor;
+    color: $lightColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem;
+
+    strong {
+        font-size: $fontSizeH6;
+    }
+
+    .fotter_links {
+        margin: 0 auto;
+
+        i {
+            font-size: 3rem;
+            padding: .6rem;
+            border-radius: 50%;
+            background-color: $lightColor;
+            color: $darkColor;
+            margin: 4rem 1rem;
+        }
+
+        a:hover {
+            opacity: .5;
+            transition: .4s ease-in-out;
+        }
+    }
+}

@@ -110,7 +110,7 @@
             </div>
 
             <!-- Studier -->
-            <div class="u_b_card flex_col">
+            <div class="u_b_card ">
                 <div class="card_logo flex_col">
                     <i class="fas fa-university"></i>
                     <h2>Studier</h2>
@@ -139,7 +139,7 @@
             <h3 class="sub_title">Verktyg jag använder</h3>
 
             <!--tools pictures-->
-            <div class="tools_list grid">
+            <div class="tools_list ">
                 <div class="tool">
                     <div class="tool_img ">
                         <i class="fab fa-css3-alt"></i>
@@ -184,14 +184,14 @@
 
                 <div class="tool">
                     <div class="tool_img">
-                        <p class="adobe_logo">Ai</p>
+                        <i class="adobe_logo">Ai</i>
 
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
-                        <p class="adobe_logo">XD</p>
+                        <i class="adobe_logo">XD</i>
 
 
                     </div>
@@ -200,58 +200,16 @@
         </section>
 
         <!-- Projekt section from REST-->
-        <section id="#nav_projekt" class="flex_col">
+        <section id="nav_projekt" class="flex_col">
             <img class="sub_img center_img" src="images/project.svg"
                 alt="en webbplats som innehåller solen och en löv i sig">
             <h3 class="sub_title">Mina projekt</h3>
 
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img">
-                    <img src="images/" alt="">
-                </div>
+            <!-- items -->
+            <div class="projects_item" id="projects_item">
+  
             </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
+
         </section>
 
 
@@ -259,8 +217,22 @@
         <section id="nav_studier" class="flex_col">
             <img class="sub_img center_img" src="images/Study.svg" alt="en man läser en bok">
             <h3 class="sub_title">Mina studier</h3>
-            <div class="studier_table">
 
+            <!-- Studier table -->
+            <div class="table_frame">
+                <table class="studier_table">
+                    <thead>
+                        <tr>
+                            <th>Kurs</th>
+                            <th>Lärosäte</th>
+                            <th>Startdatum</th>
+                            <th>Slutdatum</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courses_table">
+
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -268,8 +240,21 @@
         <section id="nav_arbete" class="flex_col">
             <img class="sub_img center_img" src="images/job.svg" alt="en man peckar på en text">
             <h3 class="sub_title">Mina arbetserfarenhetr</h3>
-            <div class="arbete_table">
+            <!-- Studier table -->
+            <div class="table_frame">
+                <table class="studier_table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Plats</th>
+                            <th>Startdatum</th>
+                            <th>Slutdatum</th>
+                        </tr>
+                    </thead>
+                    <tbody id="works_table">
 
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -286,10 +271,10 @@
 
                     </p>
                     <!-- Links -->
-                    <div class="cta_links">
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-linkedin-in"></i>
-                        <i class="fab fa-facebook-messenger"></i>
+                    <div class="comp_links flex_row">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-messenger"></i></a>
                     </div>
 
                 </div>
@@ -302,21 +287,22 @@
         </section>
 
         <!-- Kontakt section -->
-        <section id="nav_kontakt">
+        <section class="flex_col" id="nav_kontakt">
             <img class="sub_img center_img" src="images/mailbox.svg" alt="en brevlåda">
             <h3 class="sub_title">Kontakta mig</h3>
 
 
-            <form class="Kontakt_form form" action="mailto:nick.kushkbaghi@gmail.com" method="post"
+            <form class="contact_form form" action="mailto:nick.kushkbaghi@gmail.com" method="post"
                 enctype="text/plain">
-                Namn:<br>
+
+                <label for="name">Namn:<br></label>
                 <input type="text" name="name"><br>
-                E-mail:<br>
-                <input type="text" name="mail"><br>
-                Meddelande:<br>
-                <input type="text" name="comment" size="50"><br><br>
-                <input type="submit" value="SICKA">
-                <input type="reset" value="ÅTERSTÄLLA">
+                <label for="email">E-mail:<br></label>
+                <input type="email" id="email" name="email"><br>
+                <label for="email">Meddelande:<br></label>
+                <input class="message" type="text" name="comment"><br>
+                <input class="btn" type="submit" value="SKICKA ">
+                <input class="btn" type="reset" value="ÅTERSTÄLLA ">
             </form>
         </section>
     </main>
@@ -325,17 +311,20 @@
     <footer class="flex_col">
         <strong>Nick Kushkbaghi</strong>
         <!-- Links -->
-        <div class="cta_links">
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <i class="fab fa-facebook-messenger"></i>
+        <div class="fotter_links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
         </div>
         <p>Copyright &copy; 2021 Nick Kushkbaghi</p>
     </footer>
     <!-- JS -->
 
     <!-- JS.app -->
-    <script src="js/app.js"></script>
+    <script src="js/mob_nav.js"></script>
+    <script src="js/course.js"></script>
+    <script src="js/work.js"></script>
+    <script src="js/project.js"></script>
 
     <!-- CKeditor -->
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>

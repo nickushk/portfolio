@@ -8,6 +8,7 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 1rem 0;
+        margin-bottom: 10rem;
 
         .logo {
             width: 30%;
@@ -21,15 +22,16 @@ header {
             .logo_text {
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                 display: block;
-                width: 70%;
+                width: 100%;
                 font-weight: 900;
                 font-size: $fontSizeP;
+                margin-right: 3rem;
             }
 
         }
 
         ul {
-            width: 70%;
+            width: 60%;
         }
 
         a {

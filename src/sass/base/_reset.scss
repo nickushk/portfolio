@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 
@@ -17,6 +18,8 @@ html {
     color: $darkColor;
     padding: 0;
     margin: 0 auto;
+    overflow-x: hidden;
+   
 
 }
 
