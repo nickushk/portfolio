@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<!-- HTML head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page info -->
+    <meta name="description" content="REST-webbtjänst">
+    <meta name="author" content="Nick Kushkbaghi">
+    <meta name="keywords" content="API, REST, REST-webbtjänst">
+
+    <!-- faicons -->
+    <link rel=" icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/favicon.png">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="css/sass/main.css"> -->
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Start</title>
+</head>
+
+<!-- Body -->
+
+<body>
+
+    <!-- Header and navigation -->
+    <header class="admin_header">
+
+        <!-- Navigation for admin -->
+        <nav class="admin_nav ">
+            <ul class="flex_row_space_between">
+                <li><a href="admin.html">Kurs</a></li>
+                <li><a href="admin_arbete.html">Arbete</a></li>
+                <li><a  class="active" href="admin_projekt.html">Projekt</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main section -->
+    <main>
+        <!-- Arbetserfarenhet section from REST-->
+        <section id="ad_project" class="flex_col">
+
+            <h3 class="sub_title">Mina Projekt</h3>
+            <!-- arbete input -->
+            <div class="add_table flex_col">
+
+                <h4 class="sub_title_2">Lägg till</h4>
+                <form id="add_project" class="form_input">
+                    <label for="project">Title:</label><br>
+                    <input type="text" id="project" name="project"><br><br>
+                    <label for="about">plats:</label><br>
+                    <input type="text" id="about" name="about"><br><br>
+
+                    <label for="image_link">Startdatum:</label>
+                    <input type="month" id="image_link" name="image_link" min="2010-03" value="2021-10"><br><br>
+                    <label for="link">Slutdatum:</label>
+
+                    <input type="month" id="link" name="link" min="2021-03" value="2021-10"><br><br>
+
+                    <input id="work_addC" class="btn add_btn" name="workaddC" type="submit" value="LÄGG TILL">
+                </form>
+
+            </div>
+
+
+            <!-- Arbete table -->
+            <div class="table_frame">
+                <table class="studier_table">
+                    <thead>
+                        <tr>
+                            <th>Projekt</th>
+                            <th>Om</th>
+                            <th>bild länk</th>
+                            <th>Länk</th>
+                            <th>Admin</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ad_project_table">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+         <!--Edit Kurs-->
+         <div class="add_table edit_form flex_col">
+            <h4 class="sub_title_2">Uppdatera</h4>
+            <form id="edit_project_form" name= "forms" class="form_input "  >
+                <label for="edit_project">Projekt:</label><br>
+                <input type="text" id="edit_project" name="edit_project"><br><br>
+                <label for="edit_about">Om:</label><br>
+                <input type="text" id="edit_about" name="edit_about"><br><br>
+
+                <label for="edit_image_link">Bild länk:</label>
+                <input type="month" id="edit_image_link" name="edit_image_link" min="2010-03" value="2021-10"><br><br>
+                <label for="edit_link">Länk:</label>
+                
+                <input type="month" id="edit_link" name="edit_link" min="2021-03" value="2021-10"><br><br>
+
+                <input id="editC_projrct" class="btn add_btn" name="edit_addC_project" type="submit" value="LÄGG TILL">
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="flex_col">
+        <strong>Nick Kushkbaghi</strong>
+        <!-- Links -->
+        <div class="fotter_links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+        </div>
+        <p>Copyright &copy; 2021 Nick Kushkbaghi</p>
+    </footer>
+    <!-- JS -->
+
+    <!-- JS.app -->
+
+    <script src="js/ad_projekt.js"></script>
+
+    <!-- <script src="js/main.js"></script> -->
+
+    <!-- CKeditor -->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
+    <!-- Lightbox replace after footer -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.js"
+        integrity="sha512-UHlZzRsMRK/ENyZqAJSmp/EwG8K/1X/SzErVgPc0c9pFyhUwUQmoKeEvv9X0uNw8x46FxgIJqlD2opSoH5fjug=="
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

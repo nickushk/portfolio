@@ -1,20 +1,32 @@
 "use strict";
 // create variable
+var edit_form = document.getElementById("edit_course_form");
 var ad_studier_table = document.getElementById("ad_courses_table");
 var ad_course_place = document.getElementById("place");
 var ad_course = document.getElementById("course");
 var ad_course_start = document.getElementById("start");
 var ad_course_end = document.getElementById("end");
 var ad_course_btn = document.getElementById("addC");
+var ed_course_place = document.getElementById("edit_place");
+var ed_course = document.getElementById("edit_course");
+var ed_course_start = document.getElementById("edit_start");
+var ed_course_end = document.getElementById("edit_end");
+var ed_course_btn = document.getElementById("editC");
+var idEl ;
 
 var admin = false;
 
 window.addEventListener("load", adGetCourses);
 
-// with submit do it
+// with submit first run the function do it
 ad_course_btn.addEventListener("click", function (e) {
     e.preventDefault();
     addCourse();
+});
+// with submit first run the function do it
+ed_course_btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    updateCourse(idEl);
 });
 
 // contact to API and print JSON container for admin
@@ -31,10 +43,10 @@ function adGetCourses() {
                 <td>${item.place}</td>
                 <td>${item.start_date}</td>
                 <td> ${item.end_date}</td>
-                <td> <button class="edit_btn" onClick="updateCourse(${item.id})"><a href="#add_edit_course"> REDIGERA</a> </button>
-                <td> <button class="delete_btn" onClick="deleteEl(${item.id})"> RADERA</button>
+                <td> <button  class="edit_btn" onClick="setId(${item.id})"><a href="#edit_course"> REDIGERA</a> </button>
+                <td> <button class="delete_btn" onClick="deleteCourse(${item.id})"> RADERA</button>
                 </tr>`
-
+                
             })
         })
 }
@@ -72,24 +84,30 @@ function addCourse() {
 
 }
 
-
+function setId( id){
+    idEl = id;
+}
 // send element to API
-function updateCourse(id) {
-    let course = ad_course.value;
-    let place = ad_course_place.value;
-    let start = ad_course_start.value;
-    let end = ad_course_end.value;
-  
+function updateCourse(idEl) {
+   
+   
 
-    let coursToAdd = { 'course': course, 'place': place, 'start_date': start, 'end_date': end , 'id': id};
+    let course = ed_course.value;
+    let place = ed_course_place.value;
+    let start = ed_course_start.value;
+    let end = ed_course_end.value;
 
+    console.log(course + "--" + place + "--" + start + "--" + idEl + "--");
+    edit_form.classList.add("form_visible");
+
+
+
+    let courseToAdd = { 'course': course, 'place': place, 'start_date': start, 'end_date': end, 'id': idEl };
+    console.log(JSON.stringify(courseToAdd));
     // connect to API,send method and body value to API
-    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=courses', {
+    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=courses&id=' +idEl, {
         method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(coursToAdd)
+        body: JSON.stringify(courseToAdd)
 
     })
         .then((response) => {
@@ -101,13 +119,13 @@ function updateCourse(id) {
 
         }).catch((error) => {
 
-            console.log('Fetch Error!!', error);
+            console.log("Error: ", error);
         })
 
 
 }
 // contact to API and print JSON container
-function deleteEl(id) {
+function deleteCourse(id) {
 
 
     fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=courses&id=' + id, {
@@ -123,4 +141,7 @@ function deleteEl(id) {
         }).catch((error) => {
             console.log("Error: ", error);
         })
+}
+function unvis_form() {
+    edit_form.classList.remove('form_visible');
 }
