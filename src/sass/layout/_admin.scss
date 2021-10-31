@@ -1,0 +1,89 @@
+// admin header &navigation
+.admin_header {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: $blueColor;
+
+    // navbar
+    .admin_nav {
+        max-width: 96rem;
+        display: block;
+        margin: 0 auto;
+        justify-content: center;
+
+        ul {
+            li {
+                width: 100%;
+                display: flex;
+
+                a {
+                    width: 100%;
+                    font-size: $fontSizeH6;
+                    color: $lightColor;
+                    text-align: center;
+                    padding: 1.5rem;
+
+                }
+
+                &:hover {
+                    @include set_bg_color($darkColor);
+                }
+            }
+
+        }
+    }
+}
+
+.add_course {
+    background-color: $darkColor;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 3rem;
+
+    h4 {
+        font-size: $fontSizeH5;
+        color: $lightColor;
+        margin: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .form_input {
+        width: 100%;
+        background-color: $lightColor;
+        padding: 3rem;
+        border-radius: 2rem;
+
+        label {
+            font-size: $fontSizeH6;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 900;
+        }
+
+        input {
+           
+            padding: 1.5rem 3rem;
+            width: 100%;
+            border-radius: 1rem;
+            border: none;
+            border: .1rem solid $darkColor;
+
+        }
+    }
+}
+
+.add_btn {
+    margin-top: 4rem;
+    background-color: $blueColor;
+    color: $lightColor;
+    border: none;
+    
+
+    &:hover {
+        @include set_bg_color($darkColor);
+        transition: ease-in-out .3rem;
+
+        border-radius: 1erm;
+    }
+}

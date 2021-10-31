@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/sass/main.css">
     <title>Start</title>
 </head>
 
@@ -38,8 +38,8 @@
 <body>
 
     <!-- Header and navigation -->
-    <header>
-        <nav>
+    <header class="index_header">
+        <nav class="index_nav">
 
             <a class="logo flex_row content_center" href="index.html"><img src="images/nick.svg" alt="nick signatur">
                 <strong class="logo_text">Nick Kushkbaghi</strong>
@@ -296,7 +296,7 @@
                 enctype="text/plain">
 
                 <label for="name">Namn:<br></label>
-                <input type="text" name="name"><br>
+                <input id="name" type="text" name="name"><br>
                 <label for="email">E-mail:<br></label>
                 <input type="email" id="email" name="email"><br>
                 <label for="email">Meddelande:<br></label>
@@ -325,6 +325,7 @@
     <script src="js/course.js"></script>
     <script src="js/work.js"></script>
     <script src="js/project.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- CKeditor -->
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>

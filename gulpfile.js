@@ -3,7 +3,7 @@
 const files = {
     htmlPath: "src/**/*.html",
     sassPath: "src/**/*.scss",
-    jsPath: "src/**/*.js",
+    jsPath: "src/js/*.js",
     imagePath: "src/images/*",
     tsPath: "src/ts/*.ts"
 }

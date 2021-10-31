@@ -1,15 +1,15 @@
 "use strict";
 
 // Create variable
-var works_table= document.getElementById("works_table");;
+var works_table= document.getElementById("works_table");
 
 
 
 // louad the page
-window.addEventListener("load", getCourses);
+window.addEventListener("load", getWorks);
 
 // contact to API and print JSON container
-function getCourses() {
+function getWorks() {
     works_table.innerHTML = "";
 
     fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works')

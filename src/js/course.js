@@ -4,9 +4,11 @@
 var studier_table= document.getElementById("courses_table");
 
 
-
 // louad the page
 window.addEventListener("load", getCourses);
+
+
+
 
 // contact to API and print JSON container
 function getCourses() {
@@ -27,3 +29,4 @@ function getCourses() {
             })
         })
 }
+

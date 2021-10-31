@@ -1,4 +1,10 @@
 // Banner breakpoint
+@media(min-width:760px){
+    .under_banner{
+        overflow-x: hidden !important;
+  
+    }
+}
 @include mediaQ(760px) {
     .banner {
         flex-direction: column !important;

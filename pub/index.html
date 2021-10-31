@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/sass/main.css">
     <title>Start</title>
 </head>
 
@@ -38,8 +38,8 @@
 <body>
 
     <!-- Header and navigation -->
-    <header>
-        <nav>
+    <header class="index_header">
+        <nav class="index_nav">
 
             <a class="logo flex_row content_center" href="index.html"><img src="images/nick.svg" alt="nick signatur">
                 <strong class="logo_text">Nick Kushkbaghi</strong>
@@ -110,7 +110,7 @@
             </div>
 
             <!-- Studier -->
-            <div class="u_b_card flex_col">
+            <div class="u_b_card ">
                 <div class="card_logo flex_col">
                     <i class="fas fa-university"></i>
                     <h2>Studier</h2>
@@ -135,64 +135,64 @@
 
         <!-- Verktyg section -->
         <section class="my_tools flex_col">
-            <img class="center_img" src="images/Tools.svg" alt="en man sitter vid dator med sex skärm">
-            <h3>Verktyg jag använder</h3>
+            <img class="sub_img center_img" src="images/Tools.svg" alt="en man sitter vid dator med sex skärm">
+            <h3 class="sub_title">Verktyg jag använder</h3>
 
             <!--tools pictures-->
-            <div class="tools_list grid_four">
+            <div class="tools_list ">
                 <div class="tool">
-                    <div class="tool_img flex_row">
+                    <div class="tool_img ">
                         <i class="fab fa-css3-alt"></i>
-                        <strong>CSS</strong>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
                         <i class="fab fa-html5"></i>
-                        <strong>HTML</strong>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
                         <i class="fab fa-js-square"></i>
-                        <strong>JavaScript</strong>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
                         <i class="fab fa-php"></i>
-                        <strong>PHP</strong>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
                         <i class="fab fa-java"></i>
-                        <strong>Java</strong>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
                         <i class="fab fa-gulp"></i>
-                        <strong>Gulp</strong>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
-                        <p class="adobe_logo">Ai</p>
-                        <strong>Adobe Illustration</strong>
+                        <i class="adobe_logo">Ai</i>
+
                     </div>
                 </div>
 
                 <div class="tool">
                     <div class="tool_img">
-                        <p class="adobe_logo">XD</p>
-                        <strong>Adobe XD</strong>
+                        <i class="adobe_logo">XD</i>
+
 
                     </div>
                 </div>
@@ -200,120 +200,109 @@
         </section>
 
         <!-- Projekt section from REST-->
-        <section id="#nav_projekt" class="flex_col">
-            <img src="images/project.svg" alt="en webbplats som innehåller solen och en löv i sig">
-            <h3>Mina projekt</h3>
+        <section id="nav_projekt" class="flex_col">
+            <img class="sub_img center_img" src="images/project.svg"
+                alt="en webbplats som innehåller solen och en löv i sig">
+            <h3 class="sub_title">Mina projekt</h3>
 
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img">
-                    <img src="images/" alt="">
-                </div>
+            <!-- items -->
+            <div class="projects_item" id="projects_item">
+  
             </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
-            <div class="webbsite">
-                <div class="web_infor">
-                    <h4></h4>
-                    <strong></strong>
-                    <p></p>
-                    <a href="#nav_projekt">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
-                </div>
-                <div class="web_img"></div>
-            </div>
+
         </section>
 
 
         <!-- Studier section from REST-->
         <section id="nav_studier" class="flex_col">
-            <img src="images/Study.svg" alt="en man läser en bok">
-            <h3>Mina studier</h3>
-            <div class="studier_table">
+            <img class="sub_img center_img" src="images/Study.svg" alt="en man läser en bok">
+            <h3 class="sub_title">Mina studier</h3>
 
+            <!-- Studier table -->
+            <div class="table_frame">
+                <table class="studier_table">
+                    <thead>
+                        <tr>
+                            <th>Kurs</th>
+                            <th>Lärosäte</th>
+                            <th>Startdatum</th>
+                            <th>Slutdatum</th>
+                        </tr>
+                    </thead>
+                    <tbody id="courses_table">
+
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- Arbetserfarenhet section from REST-->
         <section id="nav_arbete" class="flex_col">
-            <img src="images/job.svg" alt="en man peckar på en text">
-            <h3>Mina arbetserfarenhetr</h3>
-            <div class="arbete_table">
+            <img class="sub_img center_img" src="images/job.svg" alt="en man peckar på en text">
+            <h3 class="sub_title">Mina arbetserfarenhetr</h3>
+            <!-- Studier table -->
+            <div class="table_frame">
+                <table class="studier_table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Plats</th>
+                            <th>Startdatum</th>
+                            <th>Slutdatum</th>
+                        </tr>
+                    </thead>
+                    <tbody id="works_table">
 
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <!-- Om section -->
-        <section id="nav_om">
-            <img src="images/om.svg" alt="en man ">
-            <h3>Om mig</h3>
-            <div class="om_text flex_col">
-                <h4>Webbutvecklare och webbdesigner</h4>
-                <p>
-                    Jag är en väldigt nyfiken och självgående person med en stor passion för design i allmänhet.
-                    om webbutvecklare är jag mycket målmedveten med ett stort sinne för problemlösning
+        <section class="flex_col" id="nav_om">
+            <img class="sub_img center_img" src="images/om.svg" alt="en man med svart tröja">
+            <h3 class="sub_title">Om mig</h3>
+            <div class="om flex_row">
+                <div class="om_text flex_col">
+                    <h4>Webbutvecklare och webbdesigner</h4>
+                    <p>
+                        Jag är en väldigt nyfiken och självgående person med en stor passion för design i allmänhet.
+                        om webbutvecklare är jag mycket målmedveten med ett stort sinne för problemlösning
 
-                </p>
-                <!-- Links -->
-                <div class="cta_links">
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                    <i class="fab fa-facebook-messenger"></i>
+                    </p>
+                    <!-- Links -->
+                    <div class="comp_links flex_row">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <!-- kompetenser card -->
-            <div class="kompetenser">
-                <img src="images/comp.svg" alt="en man sitter vid en dator">
+                <!-- kompetenser card -->
+                <div class="kompetenser">
+                    <img src="images/comp.svg" alt="en man sitter vid en dator">
+                </div>
             </div>
         </section>
 
         <!-- Kontakt section -->
-        <section id="nav_kontakt">
-            <img src="images/mailbox.svg" alt="en brevlåda">
-            <h3>Kontakta mig</h3>
+        <section class="flex_col" id="nav_kontakt">
+            <img class="sub_img center_img" src="images/mailbox.svg" alt="en brevlåda">
+            <h3 class="sub_title">Kontakta mig</h3>
 
 
-            <form class="Kontakt_form form" action="mailto:nick.kushkbaghi@gmail.com" method="post"
+            <form class="contact_form form" action="mailto:nick.kushkbaghi@gmail.com" method="post"
                 enctype="text/plain">
-                Namn:<br>
-                <input type="text" name="name"><br>
-                E-mail:<br>
-                <input type="text" name="mail"><br>
-                Meddelande:<br>
-                <input type="text" name="comment" size="50"><br><br>
-                <input type="submit" value="SICKA">
-                <input type="reset" value="ÅTERSTÄLLA">
+
+                <label for="name">Namn:<br></label>
+                <input id="name" type="text" name="name"><br>
+                <label for="email">E-mail:<br></label>
+                <input type="email" id="email" name="email"><br>
+                <label for="email">Meddelande:<br></label>
+                <input class="message" type="text" name="comment"><br>
+                <input class="btn" type="submit" value="SKICKA ">
+                <input class="btn" type="reset" value="ÅTERSTÄLLA ">
             </form>
         </section>
     </main>
@@ -322,17 +311,21 @@
     <footer class="flex_col">
         <strong>Nick Kushkbaghi</strong>
         <!-- Links -->
-        <div class="cta_links">
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <i class="fab fa-facebook-messenger"></i>
+        <div class="fotter_links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
         </div>
         <p>Copyright &copy; 2021 Nick Kushkbaghi</p>
     </footer>
     <!-- JS -->
 
     <!-- JS.app -->
-    <script src="js/app.js"></script>
+    <script src="js/mob_nav.js"></script>
+    <script src="js/course.js"></script>
+    <script src="js/work.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- CKeditor -->
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>

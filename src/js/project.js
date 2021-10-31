@@ -1,15 +1,15 @@
 "use strict";
 
 // Create variable
-var projects_item= document.getElementById("projects_item");;
+var projects_item= document.getElementById("projects_item");
 
 
 
 // louad the page
-window.addEventListener("load", getCourses);
+window.addEventListener("load", getProjects);
 
 // contact to API and print JSON container
-function getCourses() {
+function getProjects() {
     projects_item.innerHTML = "";
     let tempnr= 1;
 
