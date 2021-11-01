@@ -104,8 +104,8 @@ function updateCourse(idEl) {
     let place = ed_course_place.value;
     let start = ed_course_start.value;
     let end = ed_course_end.value;
-    if (course === "" || place === "" || idEl==="") {
-        ad_course_form.innerHTML += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
+    if (course === "" || place === "" || idEl === "") {
+        edit_form.innerHTML += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
 
     } else {
 
@@ -132,6 +132,7 @@ function updateCourse(idEl) {
 
                 console.log("Error: ", error);
             })
+        edit_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
 
     }
 }
