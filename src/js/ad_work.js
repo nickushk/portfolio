@@ -1,7 +1,9 @@
 if (admin_work === true) {
     // create variable
-    var ad_project_table = document.getElementById("ad_works_table");
-    var ad_project_place = document.getElementById("work_place");
+    var ad_work_table = document.getElementById("ad_work_table");
+    var ed_work_form = document.getElementById("edit_work_form");
+    var ad_work_form = document.getElementById("add_work_form");
+    var ad_work_place = document.getElementById("work_place");
     var ad_work = document.getElementById("work");
     var ad_work_start = document.getElementById("work_start");
     var ad_work_end = document.getElementById("work_end");
@@ -29,14 +31,14 @@ if (admin_work === true) {
 
     // contact to API and print JSON container for admin
     function adGetWorks() {
-        ad_project_table.innerHTML = "";
+        ad_work_table.innerHTML = "";
 
         fetch(work_url)
             .then(response => response.json())
             .then(data => {
 
                 data.forEach((item) => {
-                    ad_project_table.innerHTML += `
+                    ad_work_table.innerHTML += `
                     <p></p>
                     <div>
                     <h4>Title</h4>
@@ -53,7 +55,14 @@ if (admin_work === true) {
                     <div>
                     <h4>Slutdatum</h4>
                     <i> ${item.end_date}</i>
-                    </div>`
+                    </div>
+                    <div>
+                    <h4>Admin</h4>
+                    <div class="cub_btn">
+                <button  class="edit_btn" onClick="setWorkId(${item.id})"><a href="#edit_work_form">REDIGERA</a> </button>
+                <button class="delete_btn" onClick="deleteWork(${item.id})"><a href="#ad_work_table"> RADERA</a> </button>
+                </div>
+                    `
 
                 })
             })
@@ -62,35 +71,44 @@ if (admin_work === true) {
     // send element to API
     function addWork() {
         let work = ad_work.value;
-        let place = ad_project_place.value;
+        let place = ad_work_place.value;
         let start = ad_work_start.value;
         let end = ad_work_end.value;
+        console.log('eeework'+ work+'place'+ place+'start_date'+ start+ 'end_date'+ end)
+       
+        if (work === "" || place === "") {
+            ad_work_form.innerHTML  += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
+          
+        } else {
 
-        let workToAdd = { 'work': work, 'place': place, 'start_date': start, 'end_date': end };
+
+            let workToAdd = { 'work': work, 'place': place, 'start_date': start, 'end_date': end };
 
 
-        // connect to API,send method and body value to API
-        fetch(work_url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(workToAdd)
+            // connect to API,send method and body value to API
+            fetch(work_url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(workToAdd)
 
-        })
-            .then((response) => {
-
-                response.json();
             })
-            .then(data => {
-                adGetWorks();
+                .then((response) => {
 
-            }).catch((error) => {
+                    response.json();
+                })
+                .then(data => {
+                    adGetWorks();
 
-                console.log('Fetch Error!!', error);
-            })
+                }).catch((error) => {
 
+                    console.log('Fetch Error!!', error);
+                })
 
+                ad_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
+
+        }
     }
 
     // set Id as globale variable
@@ -103,36 +121,42 @@ if (admin_work === true) {
         let place = ed_work_place.value;
         let start = ed_work_start.value;
         let end = ed_work_end.value;
+        console.log(wId);
 
+        if (work=== "" || place === "" || idEl === "") {
+            ed_work_form.innerHTML  += "<p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
+         
+        } else {
 
+            let workToAdd = { 'work': work, 'place': place, 'start_date': start, 'end_date': end, 'id': wId };
+            console.log(JSON.stringify(workToAdd));
+            // connect to API,send method and body value to API
+            fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works&id=' + wId, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(workToAdd)
 
-        let workToAdd = { 'work': work, 'place': place, 'start_date': start, 'end_date': end, 'id': wId };
-        console.log(JSON.stringify(workToAdd));
-        // connect to API,send method and body value to API
-        fetch(work_url + "id=" + wId, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(workToAdd)
-
-        })
-            .then((response) => {
-
-                response.json();
             })
-            .then(data => {
-                adGetWorks();
+                .then((response) => {
 
-            }).catch((error) => {
+                    response.json();
+                })
+                .then(data => {
+                    adGetWorks();
 
-                console.log("Error: ", error);
-            })
+                }).catch((error) => {
 
+                    console.log("Error: ", error);
+                })
+
+                ed_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
+        }
 
     }
     // contact to API and print JSON container
-    function deleteEl(id) {
+    function deleteWork(id) {
         fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works&id=' + id, {
 
             method: "DELETE",

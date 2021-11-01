@@ -51,7 +51,7 @@
     color: yellow !important;
 }
 
-
+// table and form  setting
 .add_table {
     background-color: $darkColor;
     width: 100%;
@@ -69,30 +69,35 @@
 
 
     .form_input {
-        width: 0;
+        width: 100%;
         background-color: $lightColor;
         padding: 3rem;
         border-radius: 2rem;
 
+        width: 100%;
 
-        .oppen_form {
+        label {
+            padding: 1.5rem 3rem;
             width: 100%;
-            label {
-                font-size: $fontSizeH6;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                font-weight: 900;
-            }
-
-            input {
-
-                padding: 1.5rem 3rem;
-                width: 100%;
-                border-radius: 1rem;
-                border: none;
-                border: .1rem solid $darkColor;
-
-            }
+            font-size: $fontSizeH6;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 900;
         }
+
+        input {
+
+            padding: 1.5rem 3rem;
+            width: 100%;
+            border-radius: 1rem;
+            border: none;
+            border: .1rem solid $darkColor;
+        
+
+        }
+        p{
+            width: 100%;
+        }
+
     }
 }
 

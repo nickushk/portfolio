@@ -1,10 +1,7 @@
 if (index_page === true) {
 
-
     // Create variable
     var works_table = document.getElementById("works_table");
-
-
 
     // louad the page
     window.addEventListener("load", getWorks);

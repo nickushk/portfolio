@@ -445,25 +445,28 @@ footer .fotter_links a:hover {
   width: 100%;
 }
 .add_table .form_input {
-  width: 0;
+  width: 100%;
   background-color: #ece7e7;
   padding: 3rem;
   border-radius: 2rem;
-}
-.add_table .form_input .oppen_form {
   width: 100%;
 }
-.add_table .form_input .oppen_form label {
+.add_table .form_input label {
+  padding: 1.5rem 3rem;
+  width: 100%;
   font-size: clamp(1.8rem, 0.5vw + 1.6rem, 2rem);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 900;
 }
-.add_table .form_input .oppen_form input {
+.add_table .form_input input {
   padding: 1.5rem 3rem;
   width: 100%;
   border-radius: 1rem;
   border: none;
   border: 0.1rem solid #2e2a2a;
+}
+.add_table .form_input p {
+  width: 100%;
 }
 
 .add_btn {
