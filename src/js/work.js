@@ -1,29 +1,28 @@
-"use strict";
 
-// Create variable
-var works_table= document.getElementById("works_table");
-
+// // Create variable
+// var works_table= document.getElementById("works_table");
 
 
-// louad the page
-window.addEventListener("load", getWorks);
 
-// contact to API and print JSON container
-function getWorks() {
-    works_table.innerHTML = "";
+// // louad the page
+// window.addEventListener("load", getWorks);
 
-    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works')
-        .then(response => response.json())
-        .then(data => {
+// // contact to API and print JSON container
+// function getWorks() {
+//     works_table.innerHTML = "";
 
-            data.forEach((item) => {
-                works_table.innerHTML += `<tr>
-                    <td>${item.work}</td>
-                    <td>${item.place}</td>
-                    <td>${item.start_date}</td>
-                    <td> ${item.end_date}</td>
+//     fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works')
+//         .then(response => response.json())
+//         .then(data => {
+
+//             data.forEach((item) => {
+//                 works_table.innerHTML += `<tr>
+//                     <td>${item.work}</td>
+//                     <td>${item.place}</td>
+//                     <td>${item.start_date}</td>
+//                     <td> ${item.end_date}</td>
                    
-                </tr>`
-            })
-        })
-}
+//                 </tr>`
+//             })
+//         })
+// }

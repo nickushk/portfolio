@@ -25,7 +25,7 @@
 
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/sass/main.css"> -->
-    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="css/sass/main.css">
     <title>Start</title>
 </head>
 
@@ -43,6 +43,7 @@
                 <li><a class="active" href="admin_arbete.html">Arbete</a></li>
                 <li><a href="admin_projekt.html">Projekt</a></li>
             </ul>
+            <a href="index.html"><i class="fas fa-sign-out-alt">Logga ut</i></a>
         </nav>
 
     </header>
@@ -92,10 +93,10 @@
                 </table>
             </div>
         </section>
-         <!--Edit Kurs-->
-         <div class="add_table edit_form flex_col">
+        <!--Edit Kurs-->
+        <div class="add_table edit_form flex_col">
             <h4 class="sub_title_2">Uppdatera</h4>
-            <form id="edit_work_form" name= "forms" class="form_input "  >
+            <form id="edit_work_form" name="forms" class="form_input ">
                 <label for="edit_work">Kurs:</label><br>
                 <input type="text" id="edit_work" name="edit_work"><br><br>
                 <label for="edit_place_work">Lärosäte:</label><br>
@@ -104,7 +105,7 @@
                 <label for="edit_start_work">Startdatum:</label>
                 <input type="month" id="edit_start_work" name="edit_start_work" min="2010-03" value="2021-10"><br><br>
                 <label for="edit_end_work">Slutdatum:</label>
-                
+
                 <input type="month" id="edit_end_work" name="edit_end_work" min="2021-03" value="2021-10"><br><br>
 
                 <input id="editC_work" class="btn add_btn" name="edit_addC_work" type="submit" value="LÄGG TILL">
@@ -126,21 +127,7 @@
     <!-- JS -->
 
     <!-- JS.app -->
-
-
-
     <script src="js/main.js"></script>
-
-    <!-- CKeditor -->
-    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-
-    <!-- Lightbox replace after footer -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.js"
-        integrity="sha512-UHlZzRsMRK/ENyZqAJSmp/EwG8K/1X/SzErVgPc0c9pFyhUwUQmoKeEvv9X0uNw8x46FxgIJqlD2opSoH5fjug=="
-        crossorigin="anonymous"></script>
-
 </body>
 
 </html>

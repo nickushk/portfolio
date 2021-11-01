@@ -1,10 +1,10 @@
-"user strict";
+"use strict";
 
 // creat am element of menu id
 const menu_btn = document.querySelector(".menu_btn");
 //create a boolean element
 let menu_open = false;
-const nav_list = document.querySelector('.navbar_mob');
+const nav_list = document.querySelector(".navbar_mob");
 
 // add event to the menu 
 menu_btn.addEventListener('click', function(){

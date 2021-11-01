@@ -8,7 +8,8 @@
     // navbar
     .admin_nav {
         max-width: 96rem;
-        display: block;
+        display: flex;
+        align-items: center;
         margin: 0 auto;
         justify-content: center;
 
@@ -32,9 +33,14 @@
             }
 
         }
-        i{
-            font-size: 20rem;
+        a{
+            font-size: 2rem;
             color: $lightColor;
+            padding: 1rem;
+            &:hover{
+                color: rgba(255, 255, 0, 0.541);
+            }
+            
         }
     }
 }

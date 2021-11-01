@@ -1,4 +1,4 @@
-"use strict";
+
 // Create variable
 var projects_item= document.getElementById("projects_item");
 
@@ -26,7 +26,7 @@ function getProjects() {
                 <div class="web_img">
                     <img src="${item.image_link}" alt="">
                 </div`
-                console.log(item.id);
+                
             })
         })
 }

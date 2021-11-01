@@ -3,7 +3,7 @@
 const files = {
     htmlPath: "src/**/*.html",
     sassPath: "src/**/*.scss",
-    jsPath: "src/js/*.js",
+    jsPath: "src/**/*.js",
     imagePath: "src/images/*",
     tsPath: "src/ts/*.ts"
 }
@@ -24,7 +24,6 @@ const babel = require("gulp-babel");
 const imageMin = require("gulp-imagemin");
 
 var sourcemaps = require('gulp-sourcemaps');
-
 
 //* Inkludera TS
 const ts = require("gulp-typescript");
@@ -58,17 +57,16 @@ function jsTask() {
         .pipe(concat("main.js"))
         .pipe(terser())
         .pipe(dest("pub/js", { sourcemaps: "."}));
-
 }
 
-// TS task
-function tsTask(){
-    return src(files.tsPath, { sourcemaps: true })
-        .pipe(tsProject())
-         // skapa ny fill som skapades av flera filer
-         .pipe(concat("main.js"))
-        .pipe(dest("pub/js", { sourcemaps: "."}));
-};
+// // TS task
+// function tsTask(){
+//     return src(files.tsPath, { sourcemaps: true })
+//         .pipe(tsProject())
+//          // skapa ny fill som skapades av flera filer
+//          .pipe(concat("main.js"))
+//         .pipe(dest("pub/js", { sourcemaps: "."}));
+// };
 
 // Image task 
 function imageTask() {
@@ -87,13 +85,13 @@ function watchTask() {
 
     // watch for changing and reload with any changes
     watch([files.htmlPath, files.sassPath, files.jsPath, files.imagePath, files.tsPath],
-        parallel(htmlTask, jsTask, imageTask, sassTask, tsTask)).on("change", browsersync.reload);
+        parallel(htmlTask, jsTask, imageTask, sassTask)).on("change", browsersync.reload);
 
 }
 
 // defualt setting buy gulp execution
 exports.default = series(
-    parallel(htmlTask, jsTask, imageTask, sassTask, tsTask),
+    parallel(htmlTask, jsTask, imageTask, sassTask),
     watchTask
 );
 
