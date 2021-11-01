@@ -32,7 +32,13 @@
 <!-- Body -->
 
 <body>
-
+    <script>
+        var admin_work =false;
+        var admin_course =true;
+        var admin_project =false;
+        var index_page =false;
+        var login_page =false;
+    </script>
     <!-- Header and navigation -->
     <header class="admin_header">
 
@@ -77,20 +83,9 @@
             </div>
             <!-- Studier table -->
             <div class="table_frame">
-                <table class="studier_table">
-                    <thead>
-                        <tr>
-                            <th>Kurs</th>
-                            <th>Lärosäte</th>
-                            <th>Startdatum</th>
-                            <th>Slutdatum</th>
-                            <th>Admin</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ad_courses_table">
+                <article id="ad_courses_table" class="studier_table">
 
-                    </tbody>
-                </table>
+                </article>
             </div>
         </section>
 

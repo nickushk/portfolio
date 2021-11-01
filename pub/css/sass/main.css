@@ -86,6 +86,12 @@ a {
   display: grid;
 }
 
+.error_mes {
+  font-size: 2.5rem;
+  color: red;
+  padding: 2rem;
+}
+
 footer {
   width: 100%;
   height: 50vh;
@@ -439,17 +445,20 @@ footer .fotter_links a:hover {
   width: 100%;
 }
 .add_table .form_input {
-  width: 100%;
+  width: 0;
   background-color: #ece7e7;
   padding: 3rem;
   border-radius: 2rem;
 }
-.add_table .form_input label {
+.add_table .form_input .oppen_form {
+  width: 100%;
+}
+.add_table .form_input .oppen_form label {
   font-size: clamp(1.8rem, 0.5vw + 1.6rem, 2rem);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 900;
 }
-.add_table .form_input input {
+.add_table .form_input .oppen_form input {
   padding: 1.5rem 3rem;
   width: 100%;
   border-radius: 1rem;
@@ -602,7 +611,6 @@ main {
   width: 95%;
   gap: 1rem;
   align-items: flex-start;
-  overflow-x: scroll;
 }
 .under_banner .u_b_card {
   min-width: 30rem;
@@ -752,31 +760,56 @@ main {
   border-radius: 1rem;
   margin-top: 10%;
 }
-.table_frame table {
+.table_frame article {
   background-color: #ece7e7;
-  width: 90%;
+  width: 100%;
   padding: 3rem;
   border-radius: 1rem;
   text-align: left;
-  border-collapse: collapse;
 }
-.table_frame table thead tr {
-  border-bottom: 0.2rem #2e2a2a solid;
-  padding: 1rem;
+.table_frame article p {
+  background-color: #0466c8;
+  padding: 1rem 0.1rem;
+  border-radius: 1rem;
+  width: 100%;
+  display: block;
+  font-size: clamp(4rem, 4vw + 1.6rem, 5.5rem);
 }
-.table_frame table thead tr th {
-  padding: 2rem 1rem;
+.table_frame article div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem #2e2a2a solid;
+  padding: 0.2rem;
+  width: 100%;
+}
+.table_frame article div h4 {
+  width: 50%;
+  color: #2e2a2a;
+  padding: 1.5rem 0.1rem;
   font-size: clamp(1.8rem, 0.5vw + 1.6rem, 2rem);
   font-weight: 900;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-.table_frame table tbody tr {
-  border-bottom: 0.2rem #2e2a2a solid;
-  padding: 3rem;
-}
-.table_frame table tbody tr td {
-  padding: 3rem 1rem;
+.table_frame article div i {
+  width: 50%;
+  padding: 1.5rem 0.1rem;
+  color: #2e2a2a;
   font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.table_frame article div .cub_btn {
+  width: 40%;
+  border: none;
+}
+.table_frame article div .cub_btn button a {
+  color: #2e2a2a;
+}
+.table_frame article div .cub_btn button:hover {
+  background-color: #2e2a2a;
+}
+.table_frame article div .cub_btn button:hover a {
+  color: #ece7e7;
 }
 
 .om {

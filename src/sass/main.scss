@@ -114,7 +114,7 @@ main {
     width: 95%;
     gap: 1rem;
     align-items: flex-start;
-    overflow-x: scroll;
+
 
     .u_b_card {
         min-width: 30rem;
@@ -319,39 +319,71 @@ main {
     border-radius: 1rem;
     margin-top: 10%;
 
-    table {
+    article {
         background-color: $lightColor;
-        width: 90%;
+        width: 100%;
         padding: 3rem;
         border-radius: 1rem;
         text-align: left;
-        border-collapse: collapse;
 
-        thead {
-            tr {
-                border-bottom: .2rem $darkColor solid;
-                padding: 1rem;
+        p{
+            background-color:$blueColor;
+            padding: 1rem .1rem;
+            border-radius: 1rem;
+            width: 100%;
+            display: block;
+            font-size: $fontSizeH1;
 
-                th {
-                    padding: 2rem 1rem;
-                    font-size: $fontSizeH6;
-                    font-weight: 900;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                }
-            }
         }
 
-        tbody {
-            tr {
-                border-bottom: .2rem $darkColor solid;
-                padding: 3rem;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: .1rem $darkColor solid;
+            padding: .2rem;
+            width: 100%;
+           
 
-                td {
-                    padding: 3rem 1rem;
-                    font-size: $fontSizeP;
-                }
+
+            h4 {
+                width: 50%;
+                color: $darkColor;
+                padding: 1.5rem .1rem;
+                font-size: $fontSizeH6;
+                font-weight: 900;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
+
+            i {
+                width: 50%;
+                padding: 1.5rem .1rem;
+                color: $darkColor;
+                font-size: $fontSizeP;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .cub_btn{
+                width: 40%;
+                border: none;
+                button{
+                    a{
+                        color: $darkColor;
+                       
+                    }
+                    &:hover{
+                        
+                        background-color: $darkColor;
+                        a{
+                            color: $lightColor;
+                        }
+                    }
+                }
+                
+              
+            }
+          
         }
+        
     }
 }
 

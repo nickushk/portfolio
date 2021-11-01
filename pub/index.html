@@ -21,19 +21,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-
     <!-- css -->
     <link rel="stylesheet" href="css/sass/main.css">
     <title>Start</title>
 </head>
-
 <!-- Body -->
-
 <body>
-
+    <script>
+        var admin_work = false;
+        var admin_course = false;
+        var admin_project = false;
+        var index_page = true;
+        var login_page = false;
+    </script>
     <!-- Header and navigation -->
     <header class="index_header">
         <nav class="index_nav">
@@ -54,11 +54,11 @@
             <div class="header_mob flex_row_space_between">
                 <a class="logo_mob" href="index.html"><img src="images/nick.svg" alt="nick signatur"></a>
                 <!-- hamburger menu -->
-                <div class ="menu_btn" id="menu_btn">
+                <div class="menu_btn" id="menu_btn">
                     <div class="hamburger_btn"></div>
                 </div>
             </div>
-            <ul id="navbar_mob " class="navbar_mob flex_col_space_between">
+            <ul id="navbar_mob" class="navbar_mob flex_col_space_between">
                 <li><a href="index.html">Start</a></li>
                 <li><a href="#nav_om">Om mig</a></li>
                 <li><a href="#nav_projekt">Projekt</a></li>
@@ -216,19 +216,9 @@
 
             <!-- Studier table -->
             <div class="table_frame">
-                <table class="studier_table">
-                    <thead>
-                        <tr>
-                            <th>Kurs</th>
-                            <th>Lärosäte</th>
-                            <th>Startdatum</th>
-                            <th>Slutdatum</th>
-                        </tr>
-                    </thead>
-                    <tbody id="courses_table">
+                <article id="courses_table" class="studier_table">
 
-                    </tbody>
-                </table>
+                </article>
             </div>
         </section>
 
@@ -238,19 +228,9 @@
             <h3 class="sub_title">Mina arbetserfarenhetr</h3>
             <!-- Studier table -->
             <div class="table_frame">
-                <table class="studier_table">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Plats</th>
-                            <th>Startdatum</th>
-                            <th>Slutdatum</th>
-                        </tr>
-                    </thead>
-                    <tbody id="works_table">
+                <article id="works_table" class="studier_table">
 
-                    </tbody>
-                </table>
+                </article>
             </div>
         </section>
 

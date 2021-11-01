@@ -1,4 +1,5 @@
 "use strict";
+if(index_page===true){
 
 // creat am element of menu id
 const menu_btn = document.querySelector(".menu_btn");
@@ -21,3 +22,4 @@ menu_btn.addEventListener('click', function(){
         menu_open = false;
     }
 });
+}
