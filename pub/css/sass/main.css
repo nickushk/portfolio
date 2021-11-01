@@ -411,6 +411,10 @@ footer .fotter_links a:hover {
   background-color: #2e2a2a;
   color: #ece7e7;
 }
+.admin_header .admin_nav i {
+  font-size: 20rem;
+  color: #ece7e7;
+}
 
 .active {
   color: yellow !important;
@@ -507,7 +511,7 @@ footer .fotter_links a:hover {
 
 section {
   width: 95%;
-  margin: 25% auto;
+  margin: 20% auto;
 }
 
 .sub_img {
