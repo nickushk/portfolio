@@ -26,7 +26,7 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="css/sass/main.css"> -->
     <link rel="stylesheet" href="sass/main.css">
-    <title>Start</title>
+    <title>Admin</title>
 </head>
 
 <!-- Body -->
@@ -37,12 +37,16 @@
     <header class="admin_header">
 
         <!-- Navigation for admin -->
-        <nav class="admin_nav ">
+        <nav class="admin_nav flex_row ">
+
             <ul class="flex_row_space_between">
                 <li><a href="admin.html">Kurs</a></li>
                 <li><a href="admin_arbete.html">Arbete</a></li>
-                <li><a  class="active" href="admin_projekt.html">Projekt</a></li>
+                <li><a class="active" href="admin_projekt.html">Projekt</a></li>
+
             </ul>
+            <i class="fas fa-sign-out-alt">Logga ut</i>
+
         </nav>
 
     </header>
@@ -58,26 +62,26 @@
 
                 <h4 class="sub_title_2">Lägg till</h4>
                 <form id="add_project" class="form_input">
-                    <label for="project">Title:</label><br>
+                    <label for="project">Projekt:</label><br>
                     <input type="text" id="project" name="project"><br><br>
-                    <label for="about">plats:</label><br>
+                    <label for="about">Om:</label><br>
                     <input type="text" id="about" name="about"><br><br>
 
-                    <label for="image_link">Startdatum:</label>
-                    <input type="month" id="image_link" name="image_link" min="2010-03" value="2021-10"><br><br>
-                    <label for="link">Slutdatum:</label>
+                    <label for="image_link">Bild länk:</label>
+                    <input type="text" id="image_link" name="image_link"><br><br>
+                    <label for="link">Länk:</label>
 
-                    <input type="month" id="link" name="link" min="2021-03" value="2021-10"><br><br>
+                    <input type="text" id="link" name="link"><br><br>
 
-                    <input id="work_addC" class="btn add_btn" name="workaddC" type="submit" value="LÄGG TILL">
+                    <input id="project_addC" class="btn add_btn" name="project_addC" type="submit" value="LÄGG TILL">
                 </form>
 
             </div>
 
 
             <!-- Arbete table -->
-            <div class="table_frame">
-                <table class="studier_table">
+            <div class="table_frame studier_table_pro">
+                <table class="studier_table ">
                     <thead>
                         <tr>
                             <th>Projekt</th>
@@ -93,22 +97,22 @@
                 </table>
             </div>
         </section>
-         <!--Edit Kurs-->
-         <div class="add_table edit_form flex_col">
+        <!--Edit Kurs-->
+        <div class="add_table edit_form flex_col">
             <h4 class="sub_title_2">Uppdatera</h4>
-            <form id="edit_project_form" name= "forms" class="form_input "  >
+            <form id="edit_project_form" name="forms" class="form_input ">
                 <label for="edit_project">Projekt:</label><br>
                 <input type="text" id="edit_project" name="edit_project"><br><br>
                 <label for="edit_about">Om:</label><br>
                 <input type="text" id="edit_about" name="edit_about"><br><br>
 
                 <label for="edit_image_link">Bild länk:</label>
-                <input type="month" id="edit_image_link" name="edit_image_link" min="2010-03" value="2021-10"><br><br>
+                <input type="text" id="edit_image_link" name="edit_image_link" min="2010-03" value="2021-10"><br><br>
                 <label for="edit_link">Länk:</label>
-                
-                <input type="month" id="edit_link" name="edit_link" min="2021-03" value="2021-10"><br><br>
 
-                <input id="editC_projrct" class="btn add_btn" name="edit_addC_project" type="submit" value="LÄGG TILL">
+                <input type="text" id="edit_link" name="edit_link" min="2021-03" value="2021-10"><br><br>
+
+                <input id="editC_project" class="btn add_btn" name="editC_project" type="submit" value="LÄGG TILL">
             </form>
         </div>
     </main>

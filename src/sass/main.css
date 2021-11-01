@@ -629,6 +629,18 @@ footer .fotter_links a:hover {
   background-color: #2e2a2a;
 }
 
+.studier_table_pro {
+  padding: 1rem !important;
+  width: 100% !important;
+  overflow-x: scroll !important;
+  display: block;
+  margin-right: auto;
+}
+
+.studier_table_pro td {
+  font-size: 12px !important;
+}
+
 section {
   width: 95%;
   margin: 25% auto;

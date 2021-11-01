@@ -1,16 +1,16 @@
 "use strict";
 // create variable
 var ad_project_table = document.getElementById("ad_project_table");
-var ad_project_place = document.getElementById("project_place");
+var ad_about = document.getElementById("about");
 var ad_project = document.getElementById("project");
-var ad_image_link = document.getElementById("project_start");
-var ad_project_end = document.getElementById("project_end");
+var ad_image_link = document.getElementById("image_link");
+var ad_link = document.getElementById("link");
 var ad_project_btn = document.getElementById("project_addC");
-var ed_project_place = document.getElementById("edit_place_project");
-var ed_project = document.getElementById("edit_project");
-var ed_image_link = document.getElementById("edit_start_project");
-var ed_project_end = document.getElementById("edit_end_project");
 var ed_project_btn = document.getElementById("editC_project");
+var ed_project = document.getElementById("edit_project");
+var ed_about = document.getElementById("edit_about");
+var ed_image_link = document.getElementById("edit_image_link");
+var ed_link = document.getElementById("edit_link");
 var wId;
 
 window.addEventListener("load", adGetProjects);
@@ -18,12 +18,12 @@ window.addEventListener("load", adGetProjects);
 // with submit do it
 ad_project_btn.addEventListener("click", function (e) {
     e.preventDefault();
-    adGetProjects();
+    addProject();
 });
 // with submit do it
-editC_project.addEventListener("click", function (e) {
+ed_project_btn.addEventListener("click", function (e) {
     e.preventDefault();
-    updateproject(wId);
+    updateProject(wId);
 });
 
 // contact to API and print JSON container for admin
@@ -41,7 +41,7 @@ function adGetProjects() {
                 <td>${item.image_link}</td>
                 <td> ${item.link}</td>
                 <td> <button class="edit_btn" onClick="setProjectId(${item.id})"><a href="#edit_project_form"> REDIGERA</a> </button>
-                <td> <button class="delete_btn" onClick="deleteEl(${item.id})"> RADERA</button>
+                <td> <button class="delete_btn" onClick="deleteP(${item.id})"> RADERA</button>
                 </tr>`
 
             })
@@ -51,12 +51,12 @@ function adGetProjects() {
 // send element to API
 function addProject() {
     let project = ad_project.value;
-    let place = ad_project_place.value;
-    let start = ad_image_link.value;
-    let end = ad_project_end.value;
+    let about = ad_about.value;
+    let image_link = ad_image_link.value;
+    let link = ad_link.value;
 
-    let projectToAdd = { 'project': project, 'place': place, 'start_date': start, 'end_date': end };
-   
+    let projectToAdd = { 'project': project, 'about': about, 'image_link': image_link, 'link': link };
+
 
     // connect to API,send method and body value to API
     fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects', {
@@ -87,24 +87,20 @@ function setProjectId(id){
     wId = id;
 }
 // send element to API
-function updateproject(wId) {
-    let work = ed_work.value;
-    let place = ed_work_place.value;
-    let start = ed_work_start.value;
-    let end = ed_work_end.value;
+function updateProject(wId) {
+    let project = ed_project.value;
+    let about = ed_about.value;
+    let image_link = ed_image_link.value;
+    let link = ed_link.value;
     
 
 
-    let projectToAdd = { 'project': project, 'place': place, 'start_date': start, 'end_date': end, 'id': wId};
+    let projectToAdd = { 'project': project, 'about': about, 'image_link': image_link, 'link': link, 'id': wId};
     console.log(JSON.stringify(projectToAdd));
     // connect to API,send method and body value to API
-    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works&id='+ wId, {
+    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects&id='+ wId, {
         method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
         body: JSON.stringify(projectToAdd)
-
     })
         .then((response) => {
 
@@ -121,15 +117,16 @@ function updateproject(wId) {
 
 }
 // contact to API and print JSON container
-function deleteEl(id) {
-    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=works&id=' + id, {
+function deleteP(id) {
+    console.log(id);
+    fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects&id=' + id, {
 
         method: "DELETE",
     })
         .then(response => response.json())
         .then(data => {
 
-            adGetWorks();
+            adGetProjects();
 
         }).catch((error) => {
             console.log("Error: ", error);

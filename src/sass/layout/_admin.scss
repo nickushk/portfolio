@@ -32,10 +32,15 @@
             }
 
         }
+        i{
+            font-size: 2rem;
+            color: $lightColor;
+        }
     }
 }
-.active{
-    color:yellow !important;
+
+.active {
+    color: yellow !important;
 }
 
 .add_table {
@@ -98,17 +103,20 @@
     counter-reset: $lightColor;
     border-radius: 1rem;
 }
-.delete_btn{
+
+.delete_btn {
     background-color: rgb(235, 68, 38);
     padding: 1.5rem 2rem;
     border: none;
     counter-reset: $darkColor;
     border-radius: 1rem;
 }
-.edit_form{
+
+.edit_form {
     margin-bottom: 10rem;
 }
-.up_btn{
+
+.up_btn {
     display: block;
     width: 100%;
     text-align: center;
@@ -116,7 +124,21 @@
     padding: 1.5rem;
     color: $lightColor;
     font-size: 20px;
-    &:hover{
+
+    &:hover {
         background-color: $darkColor;
     }
 }
+
+.studier_table_pro {
+    padding: 1rem !important;
+    width: 100% !important;
+    overflow-x: scroll!important;
+    display: block;
+    margin-right: auto;
+    td{
+        font-size: 12px!important;
+    }
+
+}
+.
