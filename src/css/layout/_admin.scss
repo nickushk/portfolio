@@ -33,14 +33,16 @@
             }
 
         }
-        a{
+
+        a {
             font-size: 2rem;
             color: $lightColor;
             padding: 1rem;
-            &:hover{
+
+            &:hover {
                 color: rgba(255, 255, 0, 0.541);
             }
-            
+
         }
     }
 }
@@ -63,26 +65,32 @@
         width: 100%;
     }
 
+
+
     .form_input {
-        width: 100%;
+        width: 0;
         background-color: $lightColor;
         padding: 3rem;
         border-radius: 2rem;
 
-        label {
-            font-size: $fontSizeH6;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-weight: 900;
-        }
 
-        input {
-
-            padding: 1.5rem 3rem;
+        .oppen_form {
             width: 100%;
-            border-radius: 1rem;
-            border: none;
-            border: .1rem solid $darkColor;
+            label {
+                font-size: $fontSizeH6;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: 900;
+            }
 
+            input {
+
+                padding: 1.5rem 3rem;
+                width: 100%;
+                border-radius: 1rem;
+                border: none;
+                border: .1rem solid $darkColor;
+
+            }
         }
     }
 }
@@ -139,11 +147,12 @@
 .studier_table_pro {
     padding: 1rem !important;
     width: 100% !important;
-    overflow-x: scroll!important;
+    overflow-x: scroll !important;
     display: block;
     margin-right: auto;
-    td{
-        font-size: 12px!important;
+
+    td {
+        font-size: 12px !important;
     }
 
 }
