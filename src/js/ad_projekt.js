@@ -1,6 +1,8 @@
 if (admin_project === true) {
     // create variable
     var ad_project_table = document.getElementById("ad_project_table");
+    var ad_project_form = document.getElementById("ad_project_form");
+    var ed_project_form = document.getElementById("edit_project_form");
     var ad_about = document.getElementById("about");
     var ad_project = document.getElementById("project");
     var ad_image_link = document.getElementById("image_link");
@@ -35,14 +37,30 @@ if (admin_project === true) {
             .then(data => {
 
                 data.forEach((item) => {
-                    ad_project_table.innerHTML += `<tr>
-                <td>${item.project}</td>
-                <td>${item.about}</td>
-                <td>${item.image_link}</td>
-                <td> ${item.link}</td>
-                <td> <button class="edit_btn" onClick="setProjectId(${item.id})"><a href="#edit_project_form"> REDIGERA</a> </button>
-                <td> <button class="delete_btn" onClick="deleteP(${item.id})"> RADERA</button>
-                </tr>`
+                    ad_project_table.innerHTML += `
+                    <p></p>
+                    <div>
+                    <h4>Title</h4>
+                    <i>${item.project}</i>
+                    </div>
+                    <div>
+                    <h4>Plats</h4>
+                    <i>${item.about}</i>
+                    </div>
+                    <div>
+                    <h4>Startdatum</h4>
+                    <i>${item.image_link}</i>
+                    </div>
+                    <div>
+                    <h4>Slutdatum</h4>
+                    <i> ${item.link}</i>
+                    </div>
+                    <div>
+                    <h4>Admin</h4>
+                    <div class="cub_btn">
+                <button  class="edit_btn" onClick="setProjectId(${item.id})"><a href="#edit_project_form">REDIGERA</a> </button>
+                <button class="delete_btn" onClick="deleteProject(${item.id})"><a href="#ad_project_table"> RADERA</a> </button>
+                </div>`
 
                 })
             })
@@ -54,32 +72,36 @@ if (admin_project === true) {
         let about = ad_about.value;
         let image_link = ad_image_link.value;
         let link = ad_link.value;
+        if (project === "" || about === "" || image_link === "" || link === "") {
+            ad_project_form.innerHTML += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
 
-        let projectToAdd = { 'project': project, 'about': about, 'image_link': image_link, 'link': link };
+        } else {
+            let projectToAdd = { 'project': project, 'about': about, 'image_link': image_link, 'link': link };
 
 
-        // connect to API,send method and body value to API
-        fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(projectToAdd)
+            // connect to API,send method and body value to API
+            fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(projectToAdd)
 
-        })
-            .then((response) => {
-
-                response.json();
             })
-            .then(data => {
-                adGetProjects();
+                .then((response) => {
 
-            }).catch((error) => {
+                    response.json();
+                })
+                .then(data => {
+                    adGetProjects();
 
-                console.log('Fetch Error!!', error);
-            })
+                }).catch((error) => {
 
+                    console.log('Fetch Error!!', error);
+                })
 
+            ad_project_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item lagras!</p>";
+        }
     }
 
     // set Id as globale variable
@@ -93,31 +115,35 @@ if (admin_project === true) {
         let image_link = ed_image_link.value;
         let link = ed_link.value;
 
+        if(project === "" || about === "" || image_link === "" || link === "" || wId==="") {
+            ed_project_form.innerHTML += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
 
+        } else {
 
-        let projectToAdd = { 'project': project, 'about': about, 'image_link': image_link, 'link': link, 'id': wId };
-        console.log(JSON.stringify(projectToAdd));
-        // connect to API,send method and body value to API
-        fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects&id=' + wId, {
-            method: 'PUT',
-            body: JSON.stringify(projectToAdd)
-        })
-            .then((response) => {
-
-                response.json();
+            let projectToAdd = { 'project': project, 'about': about, 'image_link': image_link, 'link': link, 'id': wId };
+            console.log(JSON.stringify(projectToAdd));
+            // connect to API,send method and body value to API
+            fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects&id=' + wId, {
+                method: 'PUT',
+                body: JSON.stringify(projectToAdd)
             })
-            .then(data => {
-                adGetProjects();
+                .then((response) => {
 
-            }).catch((error) => {
+                    response.json();
+                })
+                .then(data => {
+                    adGetProjects();
 
-                console.log("Error: ", error);
-            })
+                }).catch((error) => {
 
+                    console.log("Error: ", error);
+                })
 
+            ed_project_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
+        }
     }
     // contact to API and print JSON container
-    function deleteP(id) {
+    function deleteProject(id) {
         console.log(id);
         fetch('https://studenter.miun.se/~niku2001/writeable/webb3/api/api.php?table=projects&id=' + id, {
 

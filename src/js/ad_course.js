@@ -101,7 +101,7 @@ if (admin_course === true) {
 
                     console.log('Fetch Error!!', error);
                 })
-
+                edit_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item lagras!</p>";
         }
 
 

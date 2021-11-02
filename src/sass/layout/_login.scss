@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     margin: 10% auto;
+    background-color: $darkColor;
+    border-radius: 1rem;
 
 
 
@@ -13,55 +15,56 @@
         width: 90% !important;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
         align-items: center;
         box-shadow: $shadow-box;
+        background-color: $lightColor;
+        border-radius: 1rem;
 
-    }
 
-    img {
-        width: 20%;
-        margin: 5% auto 0;
-    }
 
-    .container {
-        width: 80%;
-        padding: 10rem;
-        display: flex;
-        flex-direction: column;
-
-        margin: 0 auto;
-
-        label {
-            font-size: $fontSizeP;
-            width: 100%;
-            margin-bottom: 1rem
+        &:not(:first-child) {
+            justify-content: left;
         }
 
-        input {
-            width: 100%;
-            padding: 1.9rem;
-            border-radius: 1rem;
-            border: none;
-            border: .1rem solid $darkColor;
+        img {
+            width: 20%;
+            margin: 5% auto 0;
         }
 
-        button {
-            width: 100%;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            font-size: $fontSizeP;
-            background-color: rgb(58, 113, 185);
-            color: $lightColor;
-            border-radius: 1rem;
-            border: none;
-            &:hover{
-                @include set_bg_color($darkColor);
-                transition: .3s ease-in-out;
-                
-                
+
+            label {
+                font-size: $fontSizeP;
+                width: 90%;
+                margin-bottom: 1rem
             }
 
+            input {
+                width: 90%;
+                padding: 1.9rem;
+                border-radius: 1rem;
+                border: none;
+                border: .1rem solid $darkColor;
+            }
+
+            button {
+                width: 90%;
+                margin: 2rem 0;
+                padding: 1.5rem;
+                font-size: $fontSizeP;
+                background-color: rgb(58, 113, 185);
+                color: $lightColor;
+                border-radius: 1rem;
+                border: none;
+
+                &:hover {
+                    @include set_bg_color($darkColor);
+                    transition: .3s ease-in-out;
+
+
+                }
+
+   
         }
     }
 }

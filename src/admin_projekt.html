@@ -67,7 +67,7 @@
             <div class="add_table flex_col">
 
                 <h4 class="sub_title_2">Lägg till</h4>
-                <form id="add_project" class="form_input">
+                <form id="ad_project_form" class="form_input">
                     <label for="project">Projekt:</label><br>
                     <input type="text" id="project" name="project"><br><br>
                     <label for="about">Om:</label><br>
@@ -87,20 +87,9 @@
 
             <!-- Arbete table -->
             <div class="table_frame studier_table_pro">
-                <table class="studier_table ">
-                    <thead>
-                        <tr>
-                            <th>Projekt</th>
-                            <th>Om</th>
-                            <th>bild länk</th>
-                            <th>Länk</th>
-                            <th>Admin</th>
-                        </tr>
-                    </thead>
-                    <tbody id="ad_project_table">
+                <article id="ad_project_table" class="studier_table ">
 
-                    </tbody>
-                </table>
+                </article>
             </div>
         </section>
         <!--Edit Kurs-->
@@ -113,10 +102,10 @@
                 <input type="text" id="edit_about" name="edit_about"><br><br>
 
                 <label for="edit_image_link">Bild länk:</label>
-                <input type="text" id="edit_image_link" name="edit_image_link" min="2010-03" value="2021-10"><br><br>
+                <input type="url" id="edit_image_link" name="edit_image_link" ><br><br>
                 <label for="edit_link">Länk:</label>
 
-                <input type="text" id="edit_link" name="edit_link" min="2021-03" value="2021-10"><br><br>
+                <input type="url" id="edit_link" name="edit_link" ><br><br>
 
                 <input id="editC_project" class="btn add_btn" name="editC_project" type="submit" value="LÄGG TILL">
             </form>

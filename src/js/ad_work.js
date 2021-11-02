@@ -74,7 +74,7 @@ if (admin_work === true) {
         let place = ad_work_place.value;
         let start = ad_work_start.value;
         let end = ad_work_end.value;
-        console.log('eeework'+ work+'place'+ place+'start_date'+ start+ 'end_date'+ end)
+        
        
         if (work === "" || place === "") {
             ad_work_form.innerHTML  += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
@@ -106,7 +106,7 @@ if (admin_work === true) {
                     console.log('Fetch Error!!', error);
                 })
 
-                ad_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
+                ad_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item lagras!</p>";
 
         }
     }
@@ -121,7 +121,7 @@ if (admin_work === true) {
         let place = ed_work_place.value;
         let start = ed_work_start.value;
         let end = ed_work_end.value;
-        console.log(wId);
+
 
         if (work=== "" || place === "" || idEl === "") {
             ed_work_form.innerHTML  += "<p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";

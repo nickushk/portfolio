@@ -37,23 +37,21 @@
         var admin_work =false;
         var admin_course =false;
         var admin_project =false;
-        var index_page =true;
-        var login_page =false;
+        var index_page =false;
+        var login_page =true;
     </script>
     <main>
         <!-- Login form -->
         <div class="login_form">
 
-            <form id="form" method="post">
+            <form  class="login_form" id="login_form" method="post">
                 <img src="images/nick.svg" alt="">
-                <div class="container">
                     <label for="username"><b>Användarnamn</b></label>
                     <input id="username" type="text" placeholder="Användarnamn">
                     <label for="pass"><b>Lösenord</b></label><br>
                     <input id="pass" type="password" placeholder="****" name="psw" required>
 
                     <button id="log_btn" type="submit">LOGGA IN</button>
-                </div>
             </form>
 
         </div>
