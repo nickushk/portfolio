@@ -1,4 +1,4 @@
-if (admin_work === true && sessionStorage.getItem('login') == 1) {
+if (admin_project === true && sessionStorage.getItem('login') == 1) {
     // create variable
     var ad_project_table = document.getElementById("ad_project_table");
     var ad_project_form = document.getElementById("ad_project_form");
