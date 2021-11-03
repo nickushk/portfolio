@@ -1,6 +1,8 @@
 "use strict";
-if(index_page===true){
 
+if(index_page===true){
+    // rest session for admin-version
+    sessionStorage.setItem("login", 0);
 // creat am element of menu id
 const menu_btn = document.querySelector(".menu_btn");
 //create a boolean element

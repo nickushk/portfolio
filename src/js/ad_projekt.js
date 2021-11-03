@@ -1,4 +1,4 @@
-if (admin_project === true) {
+if (admin_work === true && sessionStorage.getItem('login') == 1) {
     // create variable
     var ad_project_table = document.getElementById("ad_project_table");
     var ad_project_form = document.getElementById("ad_project_form");
@@ -158,4 +158,7 @@ if (admin_project === true) {
                 console.log("Error: ", error);
             })
     }
+}
+else if( (admin_project === true &&  sessionStorage.getItem('login') != 1)) {
+    window.location.href = "https://studenter.miun.se/~niku2001/writeable/webb3/portfolio/admin.html";
 }

@@ -1,4 +1,4 @@
-if (admin_course === true) {
+if (admin_work === true && sessionStorage.getItem('login') == 1) {
     // create variable
     var edit_form = document.getElementById("edit_course_form");
     var formInput = document.getElementsByClassName("form_input");
@@ -173,4 +173,8 @@ if (admin_course === true) {
     function unvis_form() {
         edit_form.classList.remove('form_visible');
     }
+}
+else if(admin_course === true && sessionStorage.getItem('login') != 1) {
+       
+    window.location.href = "https://studenter.miun.se/~niku2001/writeable/webb3/portfolio/login.html";
 }

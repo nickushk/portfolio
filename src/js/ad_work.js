@@ -1,4 +1,6 @@
-if (admin_work === true) {
+
+
+if (admin_work === true && sessionStorage.getItem('login') == "1") {
     // create variable
     var ad_work_table = document.getElementById("ad_work_table");
     var ed_work_form = document.getElementById("edit_work_form");
@@ -74,11 +76,11 @@ if (admin_work === true) {
         let place = ad_work_place.value;
         let start = ad_work_start.value;
         let end = ad_work_end.value;
-        
-       
+
+
         if (work === "" || place === "") {
-            ad_work_form.innerHTML  += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
-          
+            ad_work_form.innerHTML += " <p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
+
         } else {
 
 
@@ -106,7 +108,7 @@ if (admin_work === true) {
                     console.log('Fetch Error!!', error);
                 })
 
-                ad_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item lagras!</p>";
+            ad_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item lagras!</p>";
 
         }
     }
@@ -123,9 +125,9 @@ if (admin_work === true) {
         let end = ed_work_end.value;
 
 
-        if (work=== "" || place === "" || idEl === "") {
-            ed_work_form.innerHTML  += "<p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
-         
+        if (work === "" || place === "" || idEl === "") {
+            ed_work_form.innerHTML += "<p style='color: red ; font-size: 20px; padding: 1rem;'  >*Inkorrekt imatning!</p>";
+
         } else {
 
             let workToAdd = { 'work': work, 'place': place, 'start_date': start, 'end_date': end, 'id': wId };
@@ -151,7 +153,7 @@ if (admin_work === true) {
                     console.log("Error: ", error);
                 })
 
-                ed_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
+            ed_work_form.innerHTML += " <p style='color: green ; font-size: 20px; padding: 1rem;'  >*Item uppdateras!</p>";
         }
 
     }
@@ -170,4 +172,8 @@ if (admin_work === true) {
                 console.log("Error: ", error);
             })
     }
+}
+else if(admin_work === true && sessionStorage.getItem('login') != "1") {
+       
+    window.location.href = "https://studenter.miun.se/~niku2001/writeable/webb3/portfolio/login.html";
 }
