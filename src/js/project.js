@@ -20,7 +20,7 @@ if (index_page === true) {
                     <h4>0${tempnr++}. ${item.project}</h4>
 
                     <p>${item.about}</p>
-                    <a href="${item.link}">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
+                    <a style="cursor:pointer;" href= "${item.link}">TILL WEBBPLATSEN<i class="fas fa-external-link-alt"></i></a>
                 </div>
                
                 <div class="web_img">
