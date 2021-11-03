@@ -160,5 +160,5 @@ if (admin_project === true && sessionStorage.getItem('login') == 1) {
     }
 }
 else if( (admin_project === true &&  sessionStorage.getItem('login') != 1)) {
-    window.location.href = "https://studenter.miun.se/~niku2001/writeable/webb3/portfolio/admin.html";
+    window.location.href = "https://studenter.miun.se/~niku2001/writeable/webb3/portfolio/login.html";
 }
