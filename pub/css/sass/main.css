@@ -803,11 +803,11 @@ main {
   width: 100%;
   color: #3799fb;
   font-size: 1.6rem;
-  padding: 1rem 10%;
-  margin: 10%;
+  padding: 10%;
+  margin-left: 5%;
 }
-.projects_item .webbsite .web_info a i {
-  padding-bottom: 2rem;
+.projects_item .webbsite .web_info a:hover {
+  opacity: 0.7;
 }
 .projects_item .webbsite .web_img {
   display: flex;

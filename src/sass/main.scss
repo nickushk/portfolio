@@ -283,12 +283,14 @@ main {
                 width: 100%;
                 color: lighten($blueColor, 20);
                 font-size: 1.6rem;
-                padding: 1rem 10%;
-                margin: 10%;
-
-                i {
-                    padding-bottom: 2rem;
+               
+                padding: 10%;
+                margin-left: 5%;
+                &:hover{
+                    opacity: .7;
                 }
+
+               
 
             }
         }
