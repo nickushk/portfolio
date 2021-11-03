@@ -478,7 +478,7 @@ footer .fotter_links a:hover {
 .add_btn:hover {
   background-color: #2e2a2a;
   color: #ece7e7;
-  transition: ease-in-out 0.3rem;
+  transition: ease-in-out 0.3s;
   border-radius: 1erm;
 }
 

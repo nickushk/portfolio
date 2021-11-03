@@ -110,7 +110,7 @@
 
     &:hover {
         @include set_bg_color($darkColor);
-        transition: ease-in-out .3rem;
+        transition: ease-in-out .3s;
 
         border-radius: 1erm;
     }
