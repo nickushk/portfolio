@@ -1,6 +1,7 @@
 
 
-if (admin_work === true && sessionStorage.getItem('login') == "1") {
+if (admin_work === true && sessionStorage.getItem('login') == 1) {
+    console.log("wellcome2");
     // create variable
     var ad_work_table = document.getElementById("ad_work_table");
     var ed_work_form = document.getElementById("edit_work_form");
@@ -173,7 +174,7 @@ if (admin_work === true && sessionStorage.getItem('login') == "1") {
             })
     }
 }
-else if(admin_work === true && sessionStorage.getItem('login') != "1") {
+else if(admin_work === true && sessionStorage.getItem('login') != 1) {
        
     window.location.href = "https://studenter.miun.se/~niku2001/writeable/webb3/portfolio/login.html";
 }

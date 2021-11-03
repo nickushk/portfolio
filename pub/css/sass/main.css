@@ -295,6 +295,14 @@ footer .fotter_links a:hover {
     overflow-x: hidden !important;
   }
 }
+@media only screen and (max-width: 850px) {
+  .under_banner {
+    flex-direction: column !important;
+  }
+  .under_banner .u_b_card {
+    width: 80%;
+  }
+}
 @media only screen and (max-width: 760px) {
   .banner {
     flex-direction: column !important;

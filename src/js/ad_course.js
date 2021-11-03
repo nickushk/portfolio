@@ -1,5 +1,6 @@
-if (admin_work === true && sessionStorage.getItem('login') == 1) {
+if (admin_course === true && sessionStorage.getItem('login') == 1) {
     // create variable
+  
     var edit_form = document.getElementById("edit_course_form");
     var formInput = document.getElementsByClassName("form_input");
     var ad_studier_table = document.getElementById("ad_courses_table");
